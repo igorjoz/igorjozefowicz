@@ -1,0 +1,68 @@
+$font-family-sans-serif: 'Montserrat',
+sans-serif;
+
+$main-color: #f5f5f5;
+$main-gray: gainsboro;
+$main-dark-color: #333;
+
+$hover-very-light: rgb(221, 220, 220);
+$hover-white: rgb(190, 190, 190);
+$hover-gray: darken($main-color, 22%);
+
+$active-gray: darken($main-color, 9%);
+$active-very-gray: darken($main-color, 30%);
+$active-black: darken($main-dark-color, 4%);
+
+$intense-orange: orangered;
+$intense-green: rgb(0, 145, 0);
+$warning-orange: lighten($intense-orange, 15%);
+$warning-orange-light: #ffc107;
+$warning-yellow: rgb(251, 255, 0);
+$weak-yellow: rgb(217, 243, 248);
+$disabled-grey: rgb(180, 180, 180);
+$green-success: darken(greenyellow, 17%);
+$light-green: greenyellow;
+
+$fb-color: #3b5998;
+$insta-color-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+
+// * width - 1700, 1500, 1200, 992, 768, 576, 400
+$xxxl: 1700px;
+$xxl: 1500px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 400px;
+
+// * height - 675, 575, 400
+$height-sm: 675px;
+$height-xs: 575px;
+$height-xxs: 400px;
+
+// * margins - 20%, 15%, 10%, 5%, 2%
+$xxxl-m: 20%;
+$xxl-m: 15%;
+$xl-m: 10%;
+$lg-m: 5%;
+$md-m: 2%;
+
+// * gutters
+$main-gutter: 20px;
+$top-gutter: 10px;
+
+$xl-gutter: 45px;
+$lg-gutter: 30px;
+$md-gutter: 25px;
+$sm-gutter: 15px;
+$xs-gutter: 10px;
+
+// ! ---
+
+// * button border radii
+$lg-button-radius: 6px;
+$md-button-radius: 4px;
+
+// * transition duration
+$hover-button-duration: 0.12s;
+$hover-link-duration: 0.06s;

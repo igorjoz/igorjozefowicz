@@ -13,9 +13,9 @@
         @endif
     </title>
 
-    <meta name="description" content="Igor Józefowicz - web developer's & IT passionate personal website - blog, contact">
+    <meta name="description" content="Igor Józefowicz - web developer & IT passionate - personal website - blog, contact">
     <meta name="keywords"
-    content="Igor Józefowicz, Igor, Józefowicz, igorjoz, igorjozefowicz, personal website, blog, contact">
+    content="Igor Józefowicz, Igor, Józefowicz, igorjoz, igorjozef, igorjozefowicz, personal website, blog, contact">
     <meta name="author" content="Igor Józefowicz">
 
     @vite(['resources/sass/index.scss', 'resources/js/app.js'])

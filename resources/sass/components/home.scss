@@ -1,9 +1,23 @@
 .home {
-    &__paragraph {
-        font-size: 3rem;
+    &__header-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
     }
 
     &__header-name {
         font-size: 8rem;
+    }
+
+    &__subheader {
+        font-size: 4rem;
+    }
+
+    &__paragraph {
+        font-size: 3rem;
     }
 }

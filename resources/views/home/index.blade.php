@@ -30,9 +30,9 @@
     </ul>
 </nav>
 
-<p class="home__paragraph">
-    MAIN CONTENT
-</p>
+<h1 class="home__header-name">
+    Igor Józefowicz
+</h1>
 
 <footer>
     <h1>footer</h1>

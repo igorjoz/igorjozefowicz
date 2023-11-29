@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\WorkController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +31,9 @@ Route::get('/about-me', [HomeController::class, 'aboutMe'])
 Route::get('/contact', [HomeController::class, 'contact'])
     ->name('home.contact');
 
+
 Route::get('/blog', [BlogController::class, 'index'])
     ->name('blog.index');
+
+Route::get('/gp', [WorkController::class, "giganciProgramowania"])
+    ->name('work.giganci_programowania');

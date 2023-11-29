@@ -2,6 +2,9 @@
 
 html {
     font-size: 10px;
+
+    scrollbar-width: thin;
+    scrollbar-color: white black;
 }
 
 body {
@@ -18,4 +21,18 @@ a {
     &:hover {
         text-decoration: underline;
     }
+}
+
+
+// custom bar for scroll
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
 }

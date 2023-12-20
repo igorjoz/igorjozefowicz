@@ -23,14 +23,11 @@
         <img src="{{ Storage::url('public/favicon.png') }}" alt="Igor Józefowicz" class="home__header-image">
     </div>
 
-    <h2 class="home__subheader">
+    <h2 class="home__subheader pulsate">
         Software Engineer
     </h2>
 
-    {{-- links wrapper --}}
     <div class="home__links-wrapper">
-        {{-- icon icons/github.png --}}
-
         <a href="https://github.com/igorjoz"
             class="home__link"
             target="_blank"
@@ -46,7 +43,6 @@
             target="_blank"
             rel="noopener noreferrer">
             <img src="{{ Storage::url('public/icons/linkedin.png') }}" alt="LinkedIn" class="home__link-image">
-
             LinkedIn
         </a>
 
@@ -56,14 +52,10 @@
             target="_blank"
             rel="noopener noreferrer">
             <img src="{{ Storage::url('public/icons/email.png') }}" alt="Email" class="home__link-image">
-
             Email
         </a>
     </div>
 </div>
-
-{{-- link to github --}}
-
 
 {{-- @include('components.main.footer') --}}
 

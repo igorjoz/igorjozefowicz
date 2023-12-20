@@ -21,7 +21,7 @@
     {{-- favicon favicon.png --}}
     <link rel="icon" href="{{ Storage::url('public/favicon.png') }}" type="image/x-icon">
 
-    @vite(['resources/sass/index.scss', 'resources/js/app.js'])
+    {{-- @vite(['resources/sass/index.scss', 'resources/js/app.js']) --}}
 </head>
 
 <body>

@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-// use PHPUnit\Framework\TestCase;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -21,6 +20,6 @@ class IndexPageTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertViewIs('home.index');
-        $response->assertSee('Igor Józefowicz'); // Check for specific content in the view
+        $response->assertSee('Igor Józefowicz');
     }
 }

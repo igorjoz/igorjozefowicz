@@ -170,7 +170,9 @@
 
 <section class="home__project-cards-section">
     <div class="project-card">
-        <img src="{{ Storage::url('public/projects/vento-logo.svg') }}" alt="Vento Website" class="project-card__image">
+        <div class="project-card__image-wrapper">
+            <img src="{{ Storage::url('public/projects/vento-logo.svg') }}" alt="Vento Website" class="project-card__image project-card__image--short">
+        </div>
         <div class="project-card__content">
             <h3 class="project-card__title">Vento Website & Online Shop</h3>
             <p class="project-card__description">A comprehensive web application for Vento, focusing on heating and ventilation solutions. Developed in 2020-2021.</p>
@@ -227,7 +229,7 @@
         <img src="{{ Storage::url('public/projects/finance-and-investing.png') }}" alt="Finance and Investing" class="project-card__image">
         <div class="project-card__content">
             <h3 class="project-card__title">Finance and Investing</h3>
-            <p class="project-card__description">A PHP application for finance and investment analysis.</p>
+            <p class="project-card__description">A PHP application created without backend framework.</p>
             <a href="https://github.com/igorjoz/finance-and-investing/tree/main/src" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repository</a>
         </div>
     </div>

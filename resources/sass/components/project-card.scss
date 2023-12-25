@@ -7,12 +7,33 @@
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
+    &__image-wrapper {
+        // center
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // center vertically
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
     &__image {
         width: 100%;
         height: 260px; // Adjust height as needed
-        object-fit: cover;
+        height: 220px; // Adjust height as needed
+        // object-fit: cover;
         transition: transform 0.3s ease-in-out; // Smooth transition for the transform effect
 
+        &--short {
+            height: 150px; // Adjust height as needed
+            margin: 0 100px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
     }
 
     &:hover {
@@ -54,7 +75,9 @@
         margin-top: 1rem;
         padding: 0.5rem 1rem; // Add padding to make it look like a button
         background-color: #0fa; // Button background color
+        background-color: rgb(255, 147, 165); // Button background color
         color: #fff; // Text color for the button
+        // color: black; // Text color for the button
         text-decoration: none;
         border-radius: 4px; // Rounded corners for the button
         text-align: center;
@@ -62,6 +85,7 @@
 
         &:hover {
             background-color: #08d; // Change background color on hover
+            background-color: darken(rgb(255, 147, 165), 20%); // Change background color on hover
             color: #fff; // Optional: Change text color on hover
             text-decoration: none; // Keep text decoration as none on hover
         }

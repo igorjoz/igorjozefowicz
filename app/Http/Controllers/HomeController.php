@@ -16,6 +16,10 @@ class HomeController extends Controller
         return view('home.about-me');
     }
 
+    public function services()
+    {
+        return view('home.services');
+    }
     public function contact()
     {
         return view('home.contact');

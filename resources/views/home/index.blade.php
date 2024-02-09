@@ -168,6 +168,6 @@
     </div>
 </section>
 
-{{-- @include('components.main.footer') --}}
+@include('components.main.footer')
 
 @endsection

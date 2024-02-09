@@ -1,0 +1,26 @@
+.footer {
+    font-size: 1.8rem;
+    padding: 2rem 0;
+    text-align: center;
+
+    &__paragraph {
+        margin: 0.8rem 0;
+    }
+
+    // Flexbox layout for larger screens
+    @media (min-width: $lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+
+        &__paragraph {
+            margin: 0; // Reset vertical margin
+            margin-right: 2rem; // Add horizontal spacing between items
+
+            &:last-child {
+                margin-right: 0; // Remove margin for the last item
+            }
+        }
+    }
+}

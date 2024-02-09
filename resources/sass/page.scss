@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 10px;
 
@@ -52,7 +57,6 @@ a {
 }
 
 
-// custom bar for scroll
 ::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -63,4 +67,72 @@ a {
 
 ::-webkit-scrollbar-thumb {
     background: white;
+}
+
+
+
+.text-glow {
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+.pulsate {
+    animation: pulsate 1.5s infinite alternate;
+    transform: translateZ(0);
+    will-change: text-shadow;
+}
+
+@keyframes pulsate {
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #0fa,
+            0 0 90px #0fa;
+    }
+}
+
+.neon-text {
+    color: #fff;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.7),
+        0 0 8px rgba(255, 255, 255, 0.7),
+        0 0 15px rgba(255, 255, 255, 0.7),
+        0 0 30px rgba(82, 113, 255, 0.7),
+        0 0 60px rgba(82, 113, 255, 0.7),
+        0 0 70px rgba(82, 113, 255, 0.7),
+        0 0 80px rgba(82, 113, 255, 0.7),
+        0 0 120px rgba(82, 113, 255, 0.7);
+}
+
+@keyframes pulsate-blue {
+    100% {
+        text-shadow:
+            0 0 3px rgba(255, 255, 255, 0.5),
+            0 0 7px rgba(255, 255, 255, 0.5),
+            0 0 12px rgba(255, 255, 255, 0.5),
+            0 0 25px rgba(82, 113, 255, 0.5),
+            0 0 50px rgba(82, 113, 255, 0.5),
+            0 0 60px rgba(82, 113, 255, 0.5),
+            0 0 70px rgba(82, 113, 255, 0.5),
+            0 0 100px rgba(82, 113, 255, 0.5);
+    }
+
+    0% {
+        text-shadow:
+            0 0 2px rgba(255, 255, 255, 0.5),
+            0 0 6px rgba(255, 255, 255, 0.5),
+            0 0 10px rgba(255, 255, 255, 0.5),
+            0 0 20px rgba(82, 113, 255, 0.5),
+            0 0 40px rgba(82, 113, 255, 0.5),
+            0 0 50px rgba(82, 113, 255, 0.5),
+            0 0 60px rgba(82, 113, 255, 0.5),
+            0 0 90px rgba(82, 113, 255, 0.5);
+    }
 }

@@ -11,70 +11,46 @@
         text-align: center;
     }
 
-    // &__header-name {
-    //     // center position
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
-
     &__header-name {
-        font-size: 8rem;
-        // width: 80%;
+        font-size: 3.4rem;
         text-align: center;
-        // max-width: 80%;
-
-
-        margin: 0;
-        // margin-top: 2rem;
-        margin-bottom: 11rem;
         margin-bottom: 9rem;
+        text-shadow: 2.5px 2.5px 1px rgba(255, 192, 203, 0.7);
 
-        text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.799);
-        text-shadow: 3px 3px 5px rgba(255, 192, 203, 0.799);
-        text-shadow: 3px 3px 2px rgba(255, 192, 203, 0.799);
-        text-shadow: 4.5px 4.5px 1.5px rgba(255, 192, 203, 0.799);
-        text-shadow: 4.5px 4.5px 1.5px rgba(255, 192, 203, 0.799);
-        // text-shadow: 0px 0px 10px rgba(255, 192, 203, 0.799);
-        // text-shadow: 0px 0px 10px rgba(255, 192, 203);
-
-        @media (max-width: 768px) {
-            font-size: 6rem;
-        }
-
-        @media (max-width: 576px) {
+        @media (min-width: $xss) {
             font-size: 4rem;
+            text-shadow: 3px 3px 1px rgba(255, 192, 203, 0.7);
         }
 
-        @media (max-width: 320px) {
-            font-size: 3.4rem;
+        @media (min-width: $sm) {
+            font-size: 6rem;
+            text-shadow: 3px 3px 1px rgba(255, 192, 203, 0.7);
+        }
+
+        @media (min-width: $md) {
+            font-size: 8rem;
+            text-shadow: 4px 4px 1px rgba(255, 192, 203, 0.7);
         }
     }
+
 
     &__subheader-role {
-        font-size: 5rem;
-        // font-weight: 400;
-
-        margin: 0;
+        font-size: 2.6rem;
         margin-bottom: 9rem;
 
-        @media (max-width: 768px) {
-            font-size: 4rem;
-        }
-
-        @media (max-width: 576px) {
-            font-size: 3.5rem;
-        }
-
-        @media (max-width: 320px) {
+        @media (min-width: $xss) {
             font-size: 3rem;
         }
+
+        @media (min-width: $sm) {
+            font-size: 3.8rem;
+        }
+
+        @media (min-width: $md) {
+            font-size: 5rem;
+        }
     }
 
-    &__header-image-wrapper {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
 
     &__header-image {
         width: 70px;
@@ -93,15 +69,13 @@
 
     &__links-wrapper {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-
         margin: 0;
-        // margin-top: 0;
 
-        @media (max-width: 576px) {
-            flex-direction: column;
+        @media (min-width: $sm) {
+            flex-direction: row;
         }
     }
 
@@ -109,174 +83,69 @@
         font-size: 3rem;
         display: flex;
 
-        // center items vertically
         align-items: center;
 
-        margin: 0 2.3rem;
+        margin: 0.8rem 2.3rem;
         text-decoration: white underline;
-        // text-decoration: none;
+        text-decoration: none;
 
         transition: 0.15s ease-in-out 0s, transform 0.15s ease-in-out 0s;
 
         &:hover {
             text-decoration: pink wavy underline;
-            // text-decoration: #c293ff wavy underline;
             color: pink;
-            // color: #c293ff;
 
             transform: scale(1.2);
-            // transition: 0.2s;
-            //transition: 0.2s ease-in-out;
-            // dont reset transform on mouse out
-            //transition: 0.2s ease-in-out 0s;
 
             animation-fill-mode: forwards;
 
-            // make the link pink
             .home__contact-link {
                 color: pink;
-                // color: #c293ff;
             }
         }
     }
 
     &__contact-link {
         display: block;
-
-        font-size: 3.2rem;
-        padding: 0;
+        font-size: 2.4rem;
         padding-left: 1rem;
-
-        // text-decoration: white underline;
-        //         // transition: 0.15s ease-in-out 0s,
-        // transform 0.15s ease-in-out 0s;
 
         &:hover {
             text-decoration: none;
-            // text-decoration: pink wavy underline;
-            // color: pink;
-            // color: pink;
-
-            // transform: scale(1.2);
-
-            // transition: 0.2s;
-            //transition: 0.2s ease-in-out;
-            //transition: 0.2s ease-in-out 0s;
-
-
-
             animation-fill-mode: forwards;
         }
 
-        @media (max-width: 768px) {
-            font-size: 3rem;
+        @media (min-width: $xs) {
+            font-size: 2.6rem;
         }
 
-        @media (max-width: 576px) {
-            font-size: 2.5rem;
-
-            margin: 0.8rem 0;
+        @media (min-width: $sm) {
+            font-size: 2.8rem;
         }
 
-        @media (max-width: 320px) {
-            font-size: 2rem;
-        }
-
-        &--big {
-            font-size: 5rem;
-            padding: 1px 0;
-            font-weight: bold;
-
-            @media (max-width: 768px) {
-                font-size: 4rem;
-            }
-
-            @media (max-width: 576px) {
-                font-size: 3.5rem;
-            }
-
-            @media (max-width: 320px) {
-                font-size: 3rem;
-            }
-        }
-    }
-
-    &__link {
-        // display: block;
-        text-align: center;
-
-        font-size: 3.2rem;
-        padding: 0;
-        padding-left: 1rem;
-
-        text-decoration: white underline;
-        transition: 0.15s ease-in-out 0s,
-            transform 0.15s ease-in-out 0s;
-
-        &:hover {
-            text-decoration: pink wavy underline;
-            color: pink;
-
-            transform: scale(1.1);
-
-            animation-fill-mode: forwards;
-        }
-
-        @media (max-width: 768px) {
-            font-size: 3rem;
-        }
-
-        @media (max-width: 576px) {
-            font-size: 2.5rem;
-
-            margin: 0.8rem 0;
-        }
-
-        @media (max-width: 320px) {
-            font-size: 2rem;
-        }
-
-        &--big {
-            font-size: 5rem;
-            padding: 1px 0;
-            font-weight: bold;
-
-            @media (max-width: 768px) {
-                font-size: 4rem;
-            }
-
-            @media (max-width: 576px) {
-                font-size: 3.5rem;
-            }
-
-            @media (max-width: 320px) {
-                font-size: 3rem;
-            }
+        @media (min-width: $md) {
+            font-size: 3.4rem;
         }
     }
 
     &__image-wrapper-link {
         display: flex;
-
         align-items: center;
     }
 
     &__link-image {
-        // width: 36px;
-        // width: 30px;
-        height: 36px;
+        height: 24px;
         margin-top: 3px;
-        // height: 30px;
         border-radius: 50%;
 
         filter: invert(1);
 
-        // pink color
+        @media (min-width: $sm) {
+            height: 32px;
+        }
 
-
-        @media (max-width: 576px) {
-            width: 20px;
-            height: 20px;
+        @media (min-width: $md) {
+            height: 36px;
         }
     }
 
@@ -285,41 +154,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 5rem 0; // Add padding for smaller viewports
-        // margin: 5rem 0; // Add padding for smaller viewports
-        // margin-top: 2rem;
-
+        padding: 5rem 0;
         height: 100vh;
 
-        @media (min-width: 992px) {
-            height: 100vh; // Full height on larger screens
+        @media (min-width: $lg) {
             padding: 0;
         }
     }
 
     &__bio-text-wrapper {
-        max-width: 800px; // Set a max-width for readability
+        max-width: 800px;
         text-align: center;
-        margin: 0 auto; // Center the wrapper
-        padding: 0 2rem; // Add padding on the sides
-
-        // &::before,
-        // &::after {
-        //     // Apply the same styles for both before and after the content
-        //     content: '';
-        //     display: block;
-        //     height: 2px;
-        //     width: 50%;
-        //     background-color: #fff; // A decorative line
-        //     margin: 2rem auto; // Space around the bio text
-        // }
+        margin: 0 auto;
+        padding: 0 2rem;
     }
 
     &__bio-header {
-        font-size: 4rem;
+        font-size: 2.5rem;
         margin-bottom: 5.5rem;
-        // color: #0fa; // A highlight color for the header
-        // color: pink; // A highlight color for the header
 
         &::before,
         &::after {
@@ -331,32 +183,39 @@
             margin: 2rem auto;
         }
 
-        @media (max-width: 576px) {
-            font-size: 2.5rem;
+        @media (min-width: $xs) {
+            font-size: 3rem;
+        }
+
+        @media (min-width: $sm) {
+            font-size: 4rem;
         }
     }
 
     &__bio-text {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-bottom: 1.5rem;
         line-height: 1.6;
         color: #e0e0e0;
-
         text-align: justify;
 
-        a {
-            color: #0fa; // Highlight links with the same color as the header
-            color: #c293ff;
-            text-decoration: underline;
-
-            &:hover {
-                color: pink; // Pink color on hover
-                text-decoration: underline wavy pink; // Wavy underline on hover
-            }
+        @media (min-width: $sm) {
+            font-size: 1.6rem;
         }
 
-        @media (max-width: 576px) {
-            font-size: 1.5rem;
+        @media (min-width: $md) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__link {
+        // color: #0fa;
+        color: #c293ff;
+        text-decoration: underline;
+
+        &:hover {
+            color: pink;
+            text-decoration: underline wavy pink;
         }
     }
 
@@ -368,7 +227,8 @@
 
         align-items: center;
         justify-content: center;
-        padding: 4rem 0; // Add padding for spacing
+        // justify-content: justify;
+        padding: 4rem 0;
 
         @media (min-width: 992px) {
             padding: 5rem 0;
@@ -383,7 +243,7 @@
     }
 
     &__projects-header {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-bottom: 5.5rem;
         // color: #0fa; // A highlight color for the header
 
@@ -397,43 +257,31 @@
             margin: 2rem auto;
         }
 
-        @media (max-width: 576px) {
-            font-size: 3rem;
+        @media (min-width: $md) {
+            font-size: 4rem;
         }
     }
 
     &__projects-text {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-bottom: 1.5rem;
         line-height: 1.6; // Improved readability for longer text
         color: #e0e0e0; // A softer color for the text
 
-        a {
-            color: #0fa; // Highlight links with the same color as the header
-            text-decoration: underline;
-
-            &:hover {
-                color: pink; // Pink color on hover
-                text-decoration: underline wavy pink; // Wavy underline on hover
-            }
-        }
-
-        @media (max-width: 576px) {
-            font-size: 1.6rem;
+        @media (min-width: $md) {
+            font-size: 1.8rem;
         }
     }
 
 
     &__project-cards-section {
-        padding: 4rem 0;
-        // background-color: #f5f5f5; // You can adjust this color
-
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
+        padding: 4rem 0;
     }
 
     &__project-cards-wrapper {
@@ -443,74 +291,5 @@
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
-    }
-}
-
-
-
-
-.text-glow {
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #0fa,
-        0 0 82px #0fa,
-        0 0 92px #0fa,
-        0 0 102px #0fa,
-        0 0 151px #0fa;
-}
-
-.pulsate {
-    animation: pulsate 1.5s infinite alternate;
-    transform: translateZ(0);
-    will-change: text-shadow;
-}
-
-@keyframes pulsate {
-    100% {
-        text-shadow:
-            0 0 4px #fff,
-            0 0 10px #0fa,
-            0 0 90px #0fa;
-    }
-}
-
-.neon-text {
-    color: #fff;
-    text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.7),
-        0 0 8px rgba(255, 255, 255, 0.7),
-        0 0 15px rgba(255, 255, 255, 0.7),
-        0 0 30px rgba(82, 113, 255, 0.7),
-        0 0 60px rgba(82, 113, 255, 0.7),
-        0 0 70px rgba(82, 113, 255, 0.7),
-        0 0 80px rgba(82, 113, 255, 0.7),
-        0 0 120px rgba(82, 113, 255, 0.7);
-}
-
-@keyframes pulsate-blue {
-    100% {
-        text-shadow:
-            0 0 3px rgba(255, 255, 255, 0.5),
-            0 0 7px rgba(255, 255, 255, 0.5),
-            0 0 12px rgba(255, 255, 255, 0.5),
-            0 0 25px rgba(82, 113, 255, 0.5),
-            0 0 50px rgba(82, 113, 255, 0.5),
-            0 0 60px rgba(82, 113, 255, 0.5),
-            0 0 70px rgba(82, 113, 255, 0.5),
-            0 0 100px rgba(82, 113, 255, 0.5);
-    }
-
-    0% {
-        text-shadow:
-            0 0 2px rgba(255, 255, 255, 0.5),
-            0 0 6px rgba(255, 255, 255, 0.5),
-            0 0 10px rgba(255, 255, 255, 0.5),
-            0 0 20px rgba(82, 113, 255, 0.5),
-            0 0 40px rgba(82, 113, 255, 0.5),
-            0 0 50px rgba(82, 113, 255, 0.5),
-            0 0 60px rgba(82, 113, 255, 0.5),
-            0 0 90px rgba(82, 113, 255, 0.5);
     }
 }

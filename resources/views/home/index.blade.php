@@ -58,12 +58,15 @@
         <h2 class="home__bio-header">
             About me
         </h2>
+
         <p class="home__bio-text">
-            Hello there! I'm Igor Józefowicz, also known as <a href="https://github.com/igorjoz" target="_blank" rel="noopener noreferrer" class="home__link">&commat;igorjoz</a>. Since 2018, I've been immersed in web development, focusing on PHP & Laravel to create impactful digital solutions. I complement my technical endeavors with academic studies in Computer Science at Gdańsk University of Technology.
+            Hello there! I'm Igor Józefowicz, also known as <a href="https://github.com/igorjoz" target="_blank" rel="noopener noreferrer" class="home__link">&commat;igorjoz</a>. Since 2018, I've&nbsp;been immersed in web development, focusing on PHP & Laravel to&nbsp;create impactful digital solutions. I&nbsp;complement my technical endeavors with academic studies in Computer Science at Gdańsk University of Technology.
         </p>
+
         <p class="home__bio-text">
-            As a passionate educator, I teach programming at Giganci Programowania, covering topics from Hacking & Cybersecurity to Python and C++. When not teaching, I enjoy challenging myself with Competitive Programming contests and deepening my understanding of Computer Architecture & Assembly, alongside Database Design.
+            As a&nbsp;passionate educator, I&nbsp;teach programming at Giganci Programowania, covering topics from Hacking & Cybersecurity to Python and C++. When not teaching, I&nbsp;enjoy challenging myself with Competitive Programming contests and deepening my&nbsp;understanding of Computer Architecture & Assembly, alongside Database Design.
         </p>
+
         <p class="home__bio-text">
             I'm excited to connect with fellow tech enthusiasts and professionals. Explore my website to learn more about my work or reach out on <a href="https://www.linkedin.com/in/igor-jozefowicz/" target="_blank" rel="noopener noreferrer" class="home__link">LinkedIn</a>. For collaborations or inquiries, don't hesitate to send me an email: <a href="mailto:igor@jozefowicz.pl" target="_blank" rel="noopener noreferrer" class="home__link">igor@jozefowicz.pl</a>.
         </p>
@@ -78,15 +81,15 @@
         </h2>
 
         <p class="home__projects-text">
-            🏆 My major achievement in web development is the <a href="https://www.e-kominki.com/" target="_blank" rel="noopener noreferrer" class="home__link">Vento website & online shop</a>, created in 2020-2021 for a Polish company specializing in heating and ventilation.
+            🏆 My major achievement in web development is the <a href="https://www.e-kominki.com/" target="_blank" rel="noopener noreferrer" class="home__link">Vento website & online shop</a>, created in&nbsp;2020-2021 for a&nbsp;Polish company specializing in heating and ventilation.
         </p>
 
         <p class="home__projects-text">
-            ⭐ I've also developed several Laravel applications, such as the <a href="https://github.com/igorjoz/employees_directory" target="_blank" rel="noopener noreferrer" class="home__link">Employees Directory</a>, a database management software for employees and departments, and the <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" class="home__link">Anonymous Surveys</a> app, allowing users to create and analyze anonymous surveys.
+            ⭐ I've&nbsp;also developed several Laravel applications, such as the <a href="https://github.com/igorjoz/employees_directory" target="_blank" rel="noopener noreferrer" class="home__link">Employees&nbsp;Directory</a>, a&nbsp;database management software for employees and departments, and the <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" class="home__link">Anonymous&nbsp;Surveys</a> app, allowing users to create and analyze anonymous surveys.
         </p>
 
         <p class="home__projects-text">
-            🎯 Some other notable projects include the <a href="https://github.com/igorjoz/spy-hunter-game" target="_blank" rel="noopener noreferrer" class="home__link">Spy Hunter Game</a>, an Atari 2600-styled game, the Python-based <a href="https://github.com/igorjoz/game-of-life-python" target="_blank" rel="noopener noreferrer" class="home__link">Game of Life</a>, and the <a href="https://github.com/igorjoz/css-processor" target="_blank" rel="noopener noreferrer" class="home__link">CSS Processor</a> for Algorithms & Data Structures course.
+            🎯 Some other notable projects include the <a href="https://github.com/igorjoz/spy-hunter-game" target="_blank" rel="noopener noreferrer" class="home__link">Spy&nbsp;Hunter&nbsp;Game</a>, an&nbsp;Atari 2600-styled game, the&nbsp;Python-based <a href="https://github.com/igorjoz/game-of-life-python" target="_blank" rel="noopener noreferrer" class="home__link">Game&nbsp;of&nbsp;Life</a>, and the <a href="https://github.com/igorjoz/css-processor" target="_blank" rel="noopener noreferrer" class="home__link">CSS&nbsp;Processor</a> for Algorithms & Data Structures course.
         </p>
     </div>
 </section>

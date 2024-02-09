@@ -141,7 +141,7 @@
             As a passionate educator, I teach programming at Giganci Programowania, covering topics from Hacking & Cybersecurity to Python and C++. When not teaching, I enjoy challenging myself with Competitive Programming contests and deepening my understanding of Computer Architecture & Assembly, alongside Database Design.
         </p>
         <p class="home__bio-text">
-            I'm excited to connect with fellow tech enthusiasts and professionals. Explore my <a href="#" rel="noopener noreferrer" class="home__bio-link">website</a> to learn more about my work or reach out on <a href="https://www.linkedin.com/in/igor-jozefowicz/" target="_blank" rel="noopener noreferrer" class="home__bio-link">LinkedIn</a>. For collaborations or inquiries, don't hesitate to send an email my way.
+            I'm excited to connect with fellow tech enthusiasts and professionals. Explore my website to learn more about my work or reach out on <a href="https://www.linkedin.com/in/igor-jozefowicz/" target="_blank" rel="noopener noreferrer" class="home__bio-link">LinkedIn</a>. For collaborations or inquiries, don't hesitate to send me an email: <a href="mailto:igor@jozefowicz.pl" target="_blank" rel="noopener noreferrer" class="home__bio-link">igor@jozefowicz.pl</a>.
         </p>
     </div>
 </section>

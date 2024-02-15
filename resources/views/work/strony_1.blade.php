@@ -11,7 +11,7 @@
 <div class="home__work-section">
     <h1 class="home__header-name home__work-header">
         {{-- 🤖<span class="pulsate">Sztuczna inteligencja i AppInventor</span>  03.01.2023 --}}
-        🐍<span class="">Python z Minecraftem</span>  14.02.2024
+        🌐<span class="">Strony internetowe</span>  12.02.2024
     </h1>
 
     <h2 class="home__subheader">
@@ -27,44 +27,41 @@
     </div>
 
     <div class="home__links-wrapper">
-        <a href="https://www.giganciprogramowania.edu.pl/kursy/293-python-z-minecraftem"
+        <a href="https://www.giganciprogramowania.edu.pl/kursy/39-strony-internetowe-czesc-1"
         class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            🐍Lista i opis lekcji
+            📖Lista i opis lekcji
         </a>
     </div>
 
     <div class="home__links-wrapper">
-        <a href="https://onlinegdb.com/fPj18yRpi" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            🐲Python - podstawy
+        <a href="https://igorjoz.com" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            👨‍🚀O mnie
         </a>
     </div>
 
     <div class="home__links-wrapper">
-        <a href="https://onlinegdb.com/FTg1vUSK3" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            🐛Python - bug search #1
+        <a href="https://whois.domaintools.com/" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            🔍Whois
         </a>
     </div>
 
     <div class="home__links-wrapper">
-        <a href="https://onlinegdb.com/g2_TUV9ZM" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            👾Python - bug search #2
+        <a href="https://notepad-plus-plus.org/" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            📝Notepad++
         </a>
     </div>
 
-    <div class="home__links-wrapper">
-        <a href="https://drive.google.com/file/d/1bW9SRfwzItro_A1sF--GAqD3K55eDVsd/view?usp=drive_link" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            ⛏Minecraft - koordynaty
-        </a>
-    </div>
-
-    {{-- PROJEKT ZOMIBIEZZ --}}
     {{-- <div class="home__links-wrapper">
-        <h2 class="home__subheader">
-            🚀Minecraft - projekt - skopiuj link
-        <br>
-        https://makecode.com/_VhEex8WjkFKh
-        <h2 class="home__subheader">
+        <a href="https://glitch.com/" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            👾Glitch
+        </a>
     </div> --}}
+
+    <div class="home__links-wrapper">
+        <a href="https://glitch.com/edit/#!/starter-gp" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            👋Starter
+        </a>
+    </div>
 </div>
 
 @include('components.main.footer')

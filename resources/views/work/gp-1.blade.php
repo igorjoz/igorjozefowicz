@@ -10,8 +10,7 @@
 
 <div class="home__work-section">
     <h1 class="home__header-name home__work-header">
-        {{-- 🤖<span class="pulsate">Sztuczna inteligencja i AppInventor</span>  03.01.2023 --}}
-        🐍<span class="">Python z Minecraftem</span>  14.02.2024
+        🐍<span class="">Python z Minecraftem</span>  28.02.2024
     </h1>
 
     <h2 class="home__subheader">
@@ -27,27 +26,33 @@
     </div>
 
     <div class="home__links-wrapper">
-        <a href="https://www.giganciprogramowania.edu.pl/kursy/293-python-z-minecraftem"
+        <a href="https://drive.google.com/file/d/1d0ZXmscpDNQ_kvuGdv-YNgECbnII9gEb/view?usp=drive_link" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            🐲Lekcja 2. - materiały powtórzeniowe
+        </a>
+    </div>
+
+    <div class="home__links-wrapper">
+        <a href="https://drive.google.com/file/d/1_kZygEt-OUz2Z3ofdhPgN4hemjb1DN-E/view?usp=drive_link"
         class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            🐍Lista i opis lekcji
+            🐍Ściąga - Python i MakeCode
         </a>
     </div>
 
+
+
     <div class="home__links-wrapper">
-        <a href="https://onlinegdb.com/fPj18yRpi" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            🐲Python - podstawy
+        <a href="https://onlinegdb.com/709T3CgjPl" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            🐛Bug search
         </a>
     </div>
 
-    <div class="home__links-wrapper">
-        <a href="https://onlinegdb.com/FTg1vUSK3" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            🐛Python - bug search #1
-        </a>
-    </div>
+    {{-- <div class="home__code-snippet"> --}}
+        {{-- <script src="//onlinegdb.com/embed/js/CqtkbrH91?theme=dark"></script> --}}
+    {{-- </div> --}}
 
     <div class="home__links-wrapper">
-        <a href="https://onlinegdb.com/g2_TUV9ZM" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
-            👾Python - bug search #2
+        <a href="https://onlinegdb.com/CqtkbrH91" class="home__link home__work-link" target="_blank" rel="noopener noreferrer">
+            💀
         </a>
     </div>
 

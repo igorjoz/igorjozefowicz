@@ -1,46 +1,12 @@
-// .navigation {
-//     &__hamburger {
-//         cursor: pointer;
-//         display: block;
+.navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    // background-color: #333;
+    /* Added background color for visibility */
 
-//         @media (min-width: $md) {
-//             display: none;
-//         }
-//     }
-
-//     &__hamburger-line {
-//         display: block;
-//         width: 25px;
-//         height: 3px;
-//         margin: 5px;
-//         background-color: white;
-//     }
-
-//     &__links-list {
-//         display: none;
-//         list-style: none;
-//         padding: 0;
-
-//         @media (min-width: $md) {
-//             display: block;
-//         }
-//     }
-
-//     &__list-item {
-//         @media (min-width: $md) {
-//             display: inline-block;
-//         }
-//     }
-
-//     &__link {
-//         display: block;
-//         padding: 10px;
-//         text-decoration: none;
-//         color: white;
-//     }
-// }
-
-
+}
 
 
 
@@ -52,9 +18,16 @@
 }
 
 .navbar {
+    position: absolute;
+    /* Add this line */
+    top: 0;
+    /* Position at the top of its positioned ancestor */
+    left: 0;
+    /* Position at the left of its positioned ancestor */
     width: 100%;
-    // box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-    // box-shadow: 0 1px 4px rgb(106, 165, 224);
+    /* Maintain full width */
+    /* box-shadow: 0 1px 4px rgb(146 161 176 / 15%); */
+    /* box-shadow: 0 1px 4px rgb(106, 165, 224); */
 }
 
 .nav-container {
@@ -103,7 +76,7 @@
     cursor: pointer;
 }
 
-.nav-container .hamburger-lines {
+.hamburger-lines {
     display: block;
     height: 26px;
     width: 32px;
@@ -114,9 +87,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    color: white;
 }
 
-.nav-container .hamburger-lines .line {
+.line {
     display: block;
     height: 4px;
     width: 100%;
@@ -125,16 +100,16 @@
     background: white;
 }
 
-.nav-container .hamburger-lines .line1 {
+.line1 {
     transform-origin: 0% 0%;
     transition: transform 0.4s ease-in-out;
 }
 
-.nav-container .hamburger-lines .line2 {
+.line2 {
     transition: transform 0.2s ease-in-out;
 }
 
-.nav-container .hamburger-lines .line3 {
+.line3 {
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
 }
@@ -189,4 +164,168 @@
 
 .nav-container input[type="checkbox"]:checked~.logo {
     display: none;
+}
+
+
+
+
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.hamburger-lines {
+    // display: none;
+
+
+    /* Hidden by default, shown in responsive */
+    cursor: pointer;
+}
+
+.hamburger-lines .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu-items li a:hover {
+    background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger-lines {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .checkbox {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* Base styles for the container */
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Navbar absolute positioning */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    /* Added background color for visibility */
+}
+
+/* Flexbox setup for nav-container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+/* Style adjustments for menu items and links */
+.menu-items {
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.menu-items li a:hover {
+    background-color: #555;
+}
+
+/* Hamburger lines hidden by default and shown in responsive mode */
+.hamburger-lines {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-lines .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hamburger-lines {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        right: 0;
+        top: 60px;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 20px;
+        /* Adjusted padding */
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .checkbox {
+        display: none;
+    }
 }

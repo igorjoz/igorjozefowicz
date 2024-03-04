@@ -72,6 +72,4 @@
     </div> --}}
 </div>
 
-@include('components.main.footer')
-
 @endsection

@@ -2,8 +2,6 @@
 
 @section('content')
 
-{{-- @include('components.main.navigation') --}}
-
 <section class="home__header-section">
     <h1 class="home__header-name">
         Igor Józefowicz
@@ -170,7 +168,5 @@
         </div>
     </div>
 </section>
-
-@include('components.main.footer')
 
 @endsection

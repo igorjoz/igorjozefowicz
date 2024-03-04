@@ -25,7 +25,11 @@
 </head>
 
 <body>
+    @include('components.main.navigation')
+
     @yield('content')
+
+    @include('components.main.footer')
 </body>
 
 </html>

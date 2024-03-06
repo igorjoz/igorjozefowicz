@@ -167,6 +167,15 @@
             <a href="https://github.com/igorjoz/matura" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repository</a>
         </div>
     </div>
+
+    <div class="project-card">
+        <img src="{{ Storage::url('public/projects/matura.png') }}" alt="Matura Exam Solutions" class="project-card__image">
+        <div class="project-card__content">
+            <h3 class="project-card__title">Computer Architecture</h3>
+            <p class="project-card__description">Assembly course - solutions to laboratory classes at GUT</p>
+            <a href="https://github.com/igorjoz/matura" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repository</a>
+        </div>
+    </div>
 </section>
 
 @endsection

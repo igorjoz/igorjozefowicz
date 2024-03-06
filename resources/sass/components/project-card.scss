@@ -1,6 +1,5 @@
 .project-card {
-    width: 300px; // Adjust width as needed
-    // width: 320px; // Adjust width as needed
+    width: 300px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -8,28 +7,20 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     &__image-wrapper {
-        // center
         display: flex;
         justify-content: center;
         align-items: center;
-
-        // center vertically
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
     }
 
     &__image {
         width: 100%;
-        height: 260px; // Adjust height as needed
-        height: 220px; // Adjust height as needed
-        // object-fit: cover;
-        transition: transform 0.3s ease-in-out; // Smooth transition for the transform effect
+        height: 220px;
+        transition: transform 0.3s ease-in-out;
 
         &--short {
-            height: 150px; // Adjust height as needed
+            height: 150px;
             margin: 0 100px;
             padding-top: 35px;
             padding-bottom: 35px;
@@ -43,7 +34,10 @@
     }
 
     &__content {
+        display: flex;
+        flex-direction: column;
         padding: 1rem;
+        height: 100%;
     }
 
     &__title {
@@ -57,37 +51,22 @@
         color: #666;
     }
 
-    // &__link {
-    //     font-size: 1.8rem;
-    //     display: inline-block;
-    //     margin-top: 1rem;
-    //     color: #0fa;
-    //     text-decoration: none;
-
-    //     &:hover {
-    //         text-decoration: underline;
-    //     }
-    // }
-
     &__link {
-        font-size: 1.6rem; // Adjust the font size as needed
+        font-size: 1.6rem;
         display: inline-block;
+        padding: 0.8rem 1rem;
         margin-top: 1rem;
-        padding: 0.5rem 1rem; // Add padding to make it look like a button
-        background-color: #0fa; // Button background color
-        background-color: rgb(255, 147, 165); // Button background color
-        color: #fff; // Text color for the button
-        // color: black; // Text color for the button
+        background-color: rgb(255, 147, 165);
+        color: #fff;
         text-decoration: none;
-        border-radius: 4px; // Rounded corners for the button
+        border-radius: 6px;
         text-align: center;
         transition: background-color 0.3s ease, color 0.3s ease;
 
         &:hover {
-            background-color: #08d; // Change background color on hover
-            background-color: darken(rgb(255, 147, 165), 20%); // Change background color on hover
-            color: #fff; // Optional: Change text color on hover
-            text-decoration: none; // Keep text decoration as none on hover
+            background-color: darken(rgb(255, 147, 165), 20%);
+            color: #fff;
+            text-decoration: none;
         }
     }
 }

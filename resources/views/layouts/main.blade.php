@@ -31,6 +31,10 @@
     <link rel="icon" href="{{ Storage::url('public/favicon.png') }}" type="image/x-icon">
 
     @vite(['resources/sass/index.scss', 'resources/js/app.js'])
+
+    {{-- font awesome import --}}
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --}}
+
 </head>
 
 <body>
@@ -39,6 +43,8 @@
     @yield('content')
 
     @include('components.main.footer')
+
+    @vite(['resources/js/font-awesome-icons.js'])
 </body>
 
 </html>

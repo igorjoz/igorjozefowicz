@@ -12,11 +12,12 @@
         align-items: center;
         flex-direction: column;
 
+        overflow: hidden;
     }
 
     &__image {
         width: 100%;
-        height: 220px;
+        // height: 220px;
         transition: transform 0.3s ease-in-out;
 
         &--short {
@@ -25,11 +26,19 @@
             padding-top: 35px;
             padding-bottom: 35px;
         }
+
+        &--vento {
+            transform: scale(1.3);
+        }
     }
 
     &:hover {
         .project-card__image {
             transform: scale(1.1);
+        }
+
+        .project-card__image--vento {
+            transform: scale(1.5);
         }
     }
 
@@ -44,6 +53,8 @@
         color: #666;
         font-size: 2.4rem;
         margin-bottom: 0.5rem;
+
+        text-align: center;
     }
 
     &__description {

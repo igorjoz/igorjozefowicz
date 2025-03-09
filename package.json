@@ -5,13 +5,13 @@
     "build": "vite build"
   },
   "devDependencies": {
-    "axios": "^1.6.7",
+    "axios": "^1.8.2",
     "laravel-mix": "^6.0.49",
-    "laravel-vite-plugin": "^0.6.0",
+    "laravel-vite-plugin": "^1.2.0",
     "lodash": "^4.17.19",
     "postcss": "^8.1.14",
     "sass": "^1.54.9",
-    "vite": "^3.0.0"
+    "vite": "^6.2.1"
   },
   "name": "igorjozefowicz",
   "description": "",
@@ -21,15 +21,17 @@
     "test": "tests"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
     "asynckit": "^0.4.0",
     "combined-stream": "^1.0.8",
     "delayed-stream": "^1.0.0",
-    "esbuild": "^0.15.7",
+    "esbuild": "^0.25.0",
     "esbuild-windows-64": "^0.15.7",
     "follow-redirects": "^1.15.2",
     "form-data": "^4.0.0",
     "function-bind": "^1.1.1",
     "has": "^1.0.3",
+    "igorjozefowicz": "file:",
     "is-core-module": "^2.10.0",
     "mime-db": "^1.52.0",
     "mime-types": "^2.1.35",
@@ -41,7 +43,8 @@
     "rollup": "^2.78.1",
     "source-map-js": "^1.0.2",
     "supports-preserve-symlinks-flag": "^1.0.0",
-    "vite-plugin-full-reload": "^1.0.4"
+    "vite-plugin-full-reload": "^1.0.4",
+    "vue": "^3.5.13"
   },
   "repository": {
     "type": "git",

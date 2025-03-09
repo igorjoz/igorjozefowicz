@@ -1,5 +1,5 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMN39KC4VT"></script>
@@ -37,25 +37,29 @@
 </head>
 
 <body>
-    @include('components.main.navigation')
+    @inertia
 
-    @yield('content')
+
+    {{-- @include('components.main.navigation') --}}
+
+    {{-- @yield('content') --}}
+
 
     @include('components.main.footer')
 </body>
 
-</html> --}}
-
-
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Inertia App</title>
-    @vite
-</head>
-<body>
-    @inertia
-</body>
 </html>
+
+
+{{-- <!DOCTYPE html> --}}
+{{-- <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> --}}
+{{-- <head> --}}
+    {{-- <meta charset="utf-8"> --}}
+    {{-- <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
+    {{-- <title>My Inertia App</title> --}}
+    {{-- @vite(['resources/sass/index.scss', 'resources/js/app.js']) --}}
+{{-- </head> --}}
+{{-- <body> --}}
+    {{-- @inertia --}}
+{{-- </body> --}}
+{{-- </html> --}}

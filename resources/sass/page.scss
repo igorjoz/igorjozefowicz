@@ -11,6 +11,8 @@ html {
 
     scrollbar-width: thin;
     scrollbar-color: white black;
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -136,4 +138,43 @@ a {
             0 0 60px rgba(82, 113, 255, 0.5),
             0 0 90px rgba(82, 113, 255, 0.5);
     }
+}
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-arrow a {
+    color: #fff;
+    /* Adjust color to fit your design */
+    text-decoration: none;
+    display: inline-block;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.home__bio-section .scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }

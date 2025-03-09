@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'igorjozefowicz'),
+    'name' => env('APP_NAME', 'igorjoz'),
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://igorjozefowicz.test'),
+    'url' => env('APP_URL', 'https://igorjoz.com'),
 
     'asset_url' => env('ASSET_URL'),
 

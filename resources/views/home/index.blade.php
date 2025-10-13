@@ -49,7 +49,8 @@
 
     <div class="scroll-arrow">
         <a href="#bio-section">
-            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            <!-- fa-solid fa-angle-down -->
         </a>
     </div>
 </section>

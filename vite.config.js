@@ -8,6 +8,11 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    resolve: {
+        alias: {
+            '~@fortawesome': 'node_modules/@fortawesome',
+        },
+    },
     // server: {
     //     https: true,
     //     host: 'localhost',

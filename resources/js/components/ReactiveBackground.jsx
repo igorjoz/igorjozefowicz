@@ -10,65 +10,45 @@ export default function ReactiveBackground() {
     const root = document.documentElement;
 
     let rafId;
+    // Timekeeping and inertial scroll variables
     let t = 0;
-    const state = {
-      mx: 0.12,
-      my: 0.10,
-      mx2: 0.6,
-      my2: 0.7,
-      targetX: 0.12,
-      targetY: 0.10,
-      scroll: 0,
-      targetScroll: 0,
-    };
+    let lastTs = 0;
+    let lastScrollY = (typeof window !== 'undefined' ? (window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0) : 0);
+    let scrollVel = 0; // low-pass filtered scroll velocity (viewport heights per second)
+    let inertX = 0; // inertial offsets influenced by scroll velocity
+    let inertY = 0;
 
-    const onMove = (e) => {
-      const { innerWidth, innerHeight } = window;
-      const x = e.clientX / innerWidth;
-      const y = e.clientY / innerHeight;
-      state.targetX = x;
-      state.targetY = y;
-    };
+    const clamp01 = (v) => Math.min(1, Math.max(0, v));
 
-    const onTouch = (e) => {
-      if (!e.touches || e.touches.length === 0) return;
-      const { innerWidth, innerHeight } = window;
-      const x = e.touches[0].clientX / innerWidth;
-      const y = e.touches[0].clientY / innerHeight;
-      state.targetX = x;
-      state.targetY = y;
-    };
+    const tick = (ts) => {
+      if (!lastTs) lastTs = ts;
+      const dt = Math.min(0.050, Math.max(0.0, (ts - lastTs) / 1000)); // cap dt to 50ms for stability
+      lastTs = ts;
 
-    const getScrollProgress = () => {
-      const doc = document.documentElement;
-      const body = document.body;
-      const scrollTop = doc.scrollTop || body.scrollTop;
-      const scrollHeight = (doc.scrollHeight || body.scrollHeight) - window.innerHeight;
-      return scrollHeight > 0 ? Math.min(1, Math.max(0, scrollTop / scrollHeight)) : 0;
-    };
+      // advance time more slowly for smooth paths
+      t += dt;
 
-    const onScroll = () => {
-      state.targetScroll = getScrollProgress();
-    };
+      // compute scroll velocity and apply smoothing and decay
+      const currScrollY = (typeof window !== 'undefined' ? (window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0) : 0);
+      const dv = (currScrollY - lastScrollY) / Math.max(1, (window.innerHeight || 1));
+      lastScrollY = currScrollY;
+      // low-pass filter toward dv
+      scrollVel += (dv - scrollVel) * 0.2;
+      // integrate into inertial offsets with decay
+      inertX = inertX * 0.94 + scrollVel * 0.020;
+      inertY = inertY * 0.94 - scrollVel * 0.015;
 
-    const tick = () => {
-      t += 0.005;
+      // base autonomous motion via multi-frequency Lissajous-like curves
+      const baseMx = 0.5 + 0.15 * Math.sin(t * 0.5) + 0.10 * Math.sin(t * 1.3 + 0.8);
+      const baseMy = 0.5 + 0.12 * Math.cos(t * 0.4 + 1.2) + 0.09 * Math.sin(t * 1.7);
+      const baseMx2 = 0.5 + 0.18 * Math.cos(t * 0.6 + 0.4) + 0.07 * Math.sin(t * 1.1 + 1.7);
+      const baseMy2 = 0.5 + 0.20 * Math.sin(t * 0.45 + 2.0) + 0.06 * Math.cos(t * 1.5);
 
-      state.mx += (state.targetX - state.mx) * 0.06;
-      state.my += (state.targetY - state.my) * 0.06;
-
-      state.mx2 = 0.5 + Math.cos(t * 0.8) * 0.2;
-      state.my2 = 0.5 + Math.sin(t * 0.6) * 0.25;
-
-      state.scroll += (state.targetScroll - state.scroll) * 0.06;
-
-      const px = (state.scroll - 0.5) * 0.3;
-      const py = (state.scroll - 0.5) * -0.25;
-
-      const mx = state.mx + px;
-      const my = state.my + py;
-      const mx2 = state.mx2 - px * 0.8;
-      const my2 = state.my2 - py * 0.8;
+      // apply inertial offset (counter-moving for the second light)
+      const mx = clamp01(baseMx + inertX);
+      const my = clamp01(baseMy + inertY);
+      const mx2 = clamp01(baseMx2 - inertX * 0.8);
+      const my2 = clamp01(baseMy2 - inertY * 0.8);
 
       root.style.setProperty('--mx', mx.toFixed(4));
       root.style.setProperty('--my', my.toFixed(4));
@@ -83,27 +63,24 @@ export default function ReactiveBackground() {
     };
 
     if (!prefersReduced || forceMotion) {
-      window.addEventListener('mousemove', onMove, { passive: true });
-      window.addEventListener('touchmove', onTouch, { passive: true });
-      window.addEventListener('scroll', onScroll, { passive: true });
-      state.targetScroll = getScrollProgress();
       rafId = requestAnimationFrame(tick);
     } else {
-      root.style.setProperty('--mx', String(state.mx));
-      root.style.setProperty('--my', String(state.my));
-      root.style.setProperty('--mx2', String(state.mx2));
-      root.style.setProperty('--my2', String(state.my2));
-      root.style.setProperty('--mxp', `${state.mx * 100}%`);
-      root.style.setProperty('--myp', `${state.my * 100}%`);
-      root.style.setProperty('--mx2p', `${state.mx2 * 100}%`);
-      root.style.setProperty('--my2p', `${state.my2 * 100}%`);
+      const dmx = 0.12;
+      const dmy = 0.10;
+      const dmx2 = 0.60;
+      const dmy2 = 0.70;
+      root.style.setProperty('--mx', String(dmx));
+      root.style.setProperty('--my', String(dmy));
+      root.style.setProperty('--mx2', String(dmx2));
+      root.style.setProperty('--my2', String(dmy2));
+      root.style.setProperty('--mxp', `${dmx * 100}%`);
+      root.style.setProperty('--myp', `${dmy * 100}%`);
+      root.style.setProperty('--mx2p', `${dmx2 * 100}%`);
+      root.style.setProperty('--my2p', `${dmy2 * 100}%`);
     }
 
     return () => {
       if (rafId) cancelAnimationFrame(rafId);
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('touchmove', onTouch);
-      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 

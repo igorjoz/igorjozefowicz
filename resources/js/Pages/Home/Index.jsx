@@ -8,6 +8,26 @@ import { storageUrl } from '@/utils/assets';
 export default function Index() {
     const projects = [
         {
+            imgSrc: storageUrl('public/projects/larynxai.webp'),
+            imgAlt: 'LarynxAI',
+            title: 'LarynxAI',
+            description: 'A system for dataset management and photo tagging; my part focused on building a classifier for laryngeal diseases.',
+            links: [
+                { text: 'View organization', url: 'https://github.com/LarynxAI' }
+            ]
+        },
+        {
+            imgSrc: storageUrl('public/projects/logo-forcen.svg'),
+            imgAlt: 'Forcen',
+            title: 'Forcen',
+            description: 'Business website with AI features. Implemented chatbot integration with an LLM API provider and a RAG (Retrieval-Augmented Generation) system to ground answers in company data.',
+            links: [
+                { text: 'Visit website', url: 'https://forcen.pl/' }
+            ],
+            isShortImage: true,
+            extraClass: 'project-card__image--forcen'
+        },
+        {
             imgSrc: storageUrl('public/projects/vento-logo.svg'),
             imgAlt: 'Vento Website',
             title: 'Vento Kominki Website & Online Shop',
@@ -64,15 +84,6 @@ export default function Index() {
             links: [
                 { text: 'View Python repository', url: 'https://github.com/igorjoz/game-of-life-python' },
                 { text: 'View Java repository', url: 'https://github.com/igorjoz/game-of-life-java' }
-            ]
-        },
-        {
-            imgSrc: storageUrl('public/projects/spy-hunter-crop.png'),
-            imgAlt: 'Spy Hunter Game',
-            title: 'Spy Hunter Game',
-            description: 'An Atari 2600-styled game created with C++ & SDL library.',
-            links: [
-                { text: 'View Repository', url: 'https://github.com/igorjoz/spy-hunter-game' }
             ]
         },
         {
@@ -183,14 +194,18 @@ export default function Index() {
                         </p>
 
                         <p>
-                            🎯 Some other notable projects include the <a href="https://github.com/igorjoz/spy-hunter-game" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Spy Hunter Game</a>, an Atari 2600-styled game, the Python-based <a href="https://github.com/igorjoz/game-of-life-python" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Game of Life</a>, and the <a href="https://github.com/igorjoz/css-processor" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">CSS Processor</a> for Algorithms & Data Structures course.
+                            🎯 Some other notable projects include the Python-based <a href="https://github.com/igorjoz/game-of-life-python" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Game of Life</a> and the <a href="https://github.com/igorjoz/css-processor" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">CSS Processor</a> for Algorithms & Data Structures course.
                         </p>
                     </div>
+
+                    {/* Arrow to project cards (lowered) */}
+                    <ScrollArrow targetId="project-cards" className="mt-24 sm:mt-28 md:mt-32" />
                 </div>
             </section>
 
             {/* Project Cards Section */}
-            <section className="py-20 px-4">
+            {/* Reduced top padding to pull cards closer to arrow */}
+            <section className="pt-6 pb-20 px-4" id="project-cards">
                 <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 2xl:gap-10">
                         {projects.map((project, index) => (

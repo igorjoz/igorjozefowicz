@@ -77,6 +77,19 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em
 .hero-title {
     font-family: 'Righteous', var(--font-display), var(--font-sans);
 }
+
+/* Slightly larger on very large screens (4k and above) */
+@media (min-width: 2560px) {
+    .hero-name { font-size: 12rem; } /* was around 9-10xl via tailwind classes, increase a bit */
+    .hero-title { font-size: 8rem; }
+}
+
+/* Increase even more on small phones for impact */
+@media (max-width: 420px) {
+    /* Reduced sizes for phones to prevent overflow/wrapping */
+    .hero-name { font-size: 5.6rem; line-height: 1.02; margin-bottom: 2.4rem; }
+    .hero-title { font-size: 3.8rem; margin-bottom: 2.4rem; }
+}
 strong { color: white; }
 p { color: var(--color-foreground); }
 .muted { color: var(--color-muted); }

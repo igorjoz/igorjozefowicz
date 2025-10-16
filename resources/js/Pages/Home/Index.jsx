@@ -60,7 +60,7 @@ export default function Index() {
             imgSrc: storageUrl('public/projects/game-of-life.webp'),
             imgAlt: 'Game of Life',
             title: 'Game of Life',
-            description: 'A turn-based game written in Python, pygame and Java, Spring',
+            description: 'A turn-based game written in Python, pygame and Java, Spring.',
             links: [
                 { text: 'View Python repository', url: 'https://github.com/igorjoz/game-of-life-python' },
                 { text: 'View Java repository', url: 'https://github.com/igorjoz/game-of-life-java' }

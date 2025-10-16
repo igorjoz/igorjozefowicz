@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
 // ScrollArrow component
-export default function ScrollArrow({ targetId }) {
+export default function ScrollArrow({ targetId, className = "" }) {
     const anchorRef = useRef(null);
     const playedRef = useRef(false);
     const armedRef = useRef(false);
@@ -112,7 +112,7 @@ export default function ScrollArrow({ targetId }) {
     }, []);
 
     return (
-        <div className="mt-12 text-center animate-bounce">
+        <div className={`mt-12 text-center animate-bounce ${className}`}>
             <a
                 ref={anchorRef}
                 href={`#${targetId}`}
@@ -125,6 +125,15 @@ export default function ScrollArrow({ targetId }) {
                     {/* Ghost arrows that cascade on hover */}
                     <i className="fa fa-chevron-down arrow-ghost ghost-1" aria-hidden="true"></i>
                     <i className="fa fa-chevron-down arrow-ghost ghost-2" aria-hidden="true"></i>
+                </span>
+                {/* Extra particles */}
+                <span className="particles" aria-hidden="true">
+                    <span className="particle particle-1" />
+                    <span className="particle particle-2" />
+                    <span className="particle particle-3" />
+                    <span className="particle particle-4" />
+                    <span className="particle particle-5" />
+                    <span className="particle particle-6" />
                 </span>
                 <span className="sr-only">Scroll down</span>
             </a>

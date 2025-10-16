@@ -156,6 +156,9 @@ export default function Index() {
                             I'm excited to connect with fellow tech enthusiasts and professionals. Explore my website to learn more about my work or reach out on <a href="https://www.linkedin.com/in/igor-jozefowicz/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">LinkedIn</a>. For collaborations or inquiries, don't hesitate to send me an email: <a href="mailto:igor@jozefowicz.pl" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">igor@jozefowicz.pl</a>.
                         </p>
                     </div>
+
+                    {/* Arrow to projects with extra spacing */}
+                    <ScrollArrow targetId="projects-section" className="mt-20 sm:mt-24 md:mt-28" />
                 </div>
             </section>
 

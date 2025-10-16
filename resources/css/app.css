@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import 'tailwindcss';
 
 /* Design system tokens (CSS variables) */
@@ -70,6 +71,12 @@ body {
 
 /* Base typography */
 h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+/* Hero specific typography */
+.hero-name,
+.hero-title {
+    font-family: 'Righteous', var(--font-display), var(--font-sans);
+}
 strong { color: white; }
 p { color: var(--color-foreground); }
 .muted { color: var(--color-muted); }

@@ -139,7 +139,7 @@ export default function Index() {
             {/* Bio Section */}
             <section className="min-h-[90vh] flex items-center justify-center py-20 px-4" id="bio-section">
                 <div className="max-w-7xl mx-auto w-full">
-                    <h2 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold mb-20 text-white text-center underline decoration-pink-300 decoration-2 underline-offset-8">
+                    <h2 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl font-bold mb-20 text-white text-center underline decoration-white decoration-2 underline-offset-8">
                         About me
                     </h2>
 

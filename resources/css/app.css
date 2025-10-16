@@ -88,7 +88,8 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em
 }
 
 .scroll-arrow:hover,
-.scroll-arrow:focus-visible {
+.scroll-arrow:focus-visible,
+.scroll-arrow.play {
     transform: translateY(2px) scale(1.06) rotate(0.0001deg); /* tiny translate for depth */
     text-shadow: 0 0 22px var(--primary-a35), 0 0 40px var(--accent-a16);
     filter: saturate(115%);
@@ -105,7 +106,8 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em
 }
 
 /* micro-wiggle on hover for tactile feel */
-.scroll-arrow:hover .arrow-main { animation: arrowHover 600ms ease-in-out; }
+.scroll-arrow:hover .arrow-main,
+.scroll-arrow.play .arrow-main { animation: arrowHover 600ms ease-in-out; }
 
 @keyframes arrowHover {
     0%   { transform: translateY(0) rotate(0); }
@@ -130,7 +132,8 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em
 }
 
 .scroll-arrow:hover::after,
-.scroll-arrow:focus-visible::after { opacity: 1; transform: scale(1); }
+.scroll-arrow:focus-visible::after,
+.scroll-arrow.play::after { opacity: 1; transform: scale(1); }
 
 /* sparkle trail particles */
 .scroll-arrow::before {
@@ -148,7 +151,8 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em
     pointer-events: none;
 }
 
-.scroll-arrow:hover::before {
+.scroll-arrow:hover::before,
+.scroll-arrow.play::before {
     animation: sparkleTrail 900ms ease-out forwards;
 }
 
@@ -168,8 +172,44 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em
     transform: translateY(-0.2em) scale(0.9);
 }
 
-.scroll-arrow:hover .ghost-1 { animation: arrowShoot 900ms cubic-bezier(.16,1,.3,1) 60ms forwards; }
-.scroll-arrow:hover .ghost-2 { animation: arrowShoot 900ms cubic-bezier(.16,1,.3,1) 180ms forwards; }
+.scroll-arrow:hover .ghost-1,
+.scroll-arrow.play .ghost-1 { animation: arrowShoot 900ms cubic-bezier(.16,1,.3,1) 60ms forwards; }
+.scroll-arrow:hover .ghost-2,
+.scroll-arrow.play .ghost-2 { animation: arrowShoot 900ms cubic-bezier(.16,1,.3,1) 180ms forwards; }
+
+/* Extra particles: two more tiny sparkles from the stack wrapper */
+.scroll-arrow .arrow-stack::before,
+.scroll-arrow .arrow-stack::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+    transform: translateX(-50%) translateY(-0.2em) scale(0.6);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-arrow:hover .arrow-stack::before,
+.scroll-arrow.play .arrow-stack::before { animation: sparkleTrail2 1000ms ease-out 80ms forwards; }
+.scroll-arrow:hover .arrow-stack::after,
+.scroll-arrow.play .arrow-stack::after { animation: sparkleTrail3 1100ms ease-out 160ms forwards; }
+
+@keyframes sparkleTrail2 {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-0.1em) scale(0.5); }
+    12% { opacity: .8; }
+    60% { opacity: .45; transform: translateX(-50%) translateY(1em) scale(0.9); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(2em) scale(1.05); }
+}
+
+@keyframes sparkleTrail3 {
+    0% { opacity: 0; transform: translateX(-50%) translateY(0) scale(0.6); }
+    18% { opacity: .85; }
+    60% { opacity: .5; transform: translateX(-50%) translateY(1.3em) scale(0.95); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(2.4em) scale(1.1); }
+}
 
 @keyframes arrowShoot {
     0% { opacity: 0; transform: translateY(-0.2em) scale(0.86); filter: blur(1px); }

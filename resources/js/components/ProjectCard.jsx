@@ -3,7 +3,7 @@ import Card, { CardBody, CardMedia } from '@/Components/Card';
 import Button from '@/Components/Button';
 
 // ProjectCard component
-export default function ProjectCard({ imgSrc, imgAlt, title, description, links, isShortImage = false, extraClass = '' }) {
+export default function ProjectCard({ imgSrc, imgAlt, title, description, links, isShortImage = false, extraClass = '', year }) {
         const handleImgError = (e) => {
                 if (!e?.currentTarget) return;
                 // Prevent infinite loop
@@ -47,6 +47,11 @@ export default function ProjectCard({ imgSrc, imgAlt, title, description, links,
     return (
         <Card className="flex flex-col">
             <CardMedia className={`${mediaClass} group ${(isForcen || isVento) ? 'bg-white' : ''}`}> 
+                {year && (
+                    <span className="absolute top-3 right-3 z-10 text-[1.2rem] font-semibold px-3 py-1 rounded-full shadow-sm bg-[rgba(28,28,34,0.85)] text-white ring-1 ring-white/10">
+                        {year}
+                    </span>
+                )}
                 <img
                     src={imgSrc}
                     alt={imgAlt}

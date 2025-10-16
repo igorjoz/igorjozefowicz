@@ -8,13 +8,14 @@ import { storageUrl } from '@/utils/assets';
 export default function Index() {
     const projects = [
         {
-            imgSrc: storageUrl('public/projects/larynxai.webp'),
+            imgSrc: storageUrl('public/projects/larynxai.png'),
             imgAlt: 'LarynxAI',
             title: 'LarynxAI',
             description: 'A system for dataset management and photo tagging; my part focused on building a classifier for laryngeal diseases.',
             links: [
                 { text: 'View organization', url: 'https://github.com/LarynxAI' }
-            ]
+            ],
+            year: '2025'
         },
         {
             imgSrc: storageUrl('public/projects/logo-forcen.svg'),
@@ -25,7 +26,8 @@ export default function Index() {
                 { text: 'Visit website', url: 'https://forcen.pl/' }
             ],
             isShortImage: true,
-            extraClass: 'project-card__image--forcen'
+            extraClass: 'project-card__image--forcen',
+            year: '2025'
         },
         {
             imgSrc: storageUrl('public/projects/vento-logo.svg'),
@@ -36,7 +38,8 @@ export default function Index() {
                 { text: 'Visit website', url: 'https://www.e-kominki.com/' }
             ],
             isShortImage: true,
-            extraClass: 'project-card__image--vento'
+            extraClass: 'project-card__image--vento',
+            year: '2020'
         },
         {
             imgSrc: storageUrl('public/projects/employees_directory.webp'),
@@ -45,7 +48,8 @@ export default function Index() {
             description: 'A Laravel app for managing employees and departments.',
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/employees_directory' }
-            ]
+            ],
+            year: '2022'
         },
         {
             imgSrc: storageUrl('public/projects/anonymous-surveys.webp'),
@@ -54,7 +58,8 @@ export default function Index() {
             description: 'A Laravel app that allows users to create anonymous surveys.',
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/anon-surv' }
-            ]
+            ],
+            year: '2022'
         },
         {
             imgSrc: storageUrl('public/projects/driving-course-for-ai.webp'),
@@ -64,7 +69,8 @@ export default function Index() {
             links: [
                 { text: 'View documentation', url: 'https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing' },
                 { text: 'View repository', url: 'https://github.com/igorjoz/anon-surv' }
-            ]
+            ],
+            year: '2024'
         },
         {
             imgSrc: storageUrl('public/projects/vulnerability-vault.webp'),
@@ -74,7 +80,8 @@ export default function Index() {
             links: [
                 { text: 'View website', url: 'https://igorjozefowicz.com/' },
                 { text: 'View repository', url: 'https://github.com/igorjoz/vulnerability-vault' }
-            ]
+            ],
+            year: '2024'
         },
         {
             imgSrc: storageUrl('public/projects/game-of-life.webp'),
@@ -84,7 +91,8 @@ export default function Index() {
             links: [
                 { text: 'View Python repository', url: 'https://github.com/igorjoz/game-of-life-python' },
                 { text: 'View Java repository', url: 'https://github.com/igorjoz/game-of-life-java' }
-            ]
+            ],
+            year: '2023'
         },
         {
             imgSrc: storageUrl('public/projects/finance-and-investing.webp'),
@@ -93,7 +101,8 @@ export default function Index() {
             description: 'A PHP application created without backend framework.',
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/finance-and-investing/tree/main/src' }
-            ]
+            ],
+            year: '2022'
         },
         {
             imgSrc: storageUrl('public/projects/matura.webp'),
@@ -102,7 +111,8 @@ export default function Index() {
             description: 'Solutions for 2014-2022 Polish Matura exam sheets.',
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/matura' }
-            ]
+            ],
+            year: '2021'
         }
     ];
 
@@ -218,6 +228,7 @@ export default function Index() {
                                 links={project.links}
                                 isShortImage={project.isShortImage}
                                 extraClass={project.extraClass}
+                                year={project.year}
                             />
                         ))}
                     </div>

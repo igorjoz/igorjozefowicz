@@ -196,15 +196,15 @@ export default function Index() {
 
                     <div className="space-y-8 text-white text-xl sm:text-2xl md:text-3xl leading-relaxed">
                         <p>
-                            🏆 My major achievement in web development is the <a href="https://www.e-kominki.com/" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Vento website & online shop</a>, created in 2020-2021 for a Polish company specializing in heating and ventilation.
+                            🏆 Highlights include <a href="https://github.com/LarynxAI" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">LarynxAI</a> (dataset management, photo tagging, and my classifier for laryngeal diseases) and the <a href="https://www.e-kominki.com/" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Vento website & online shop</a> for a Polish heating and ventilation company (2020–2021).
                         </p>
 
                         <p>
-                            ⭐ I've also developed several Laravel applications, such as the <a href="https://github.com/igorjoz/employees_directory" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Employees Directory</a>, a database management software for employees and departments, and the <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Anonymous Surveys</a> app, allowing users to create and analyze anonymous surveys.
+                            ⭐ I’ve also built practical Laravel apps such as the <a href="https://github.com/igorjoz/employees_directory" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Employees Directory</a> and <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Anonymous Surveys</a>.
                         </p>
 
                         <p>
-                            🎯 Some other notable projects include the Python-based <a href="https://github.com/igorjoz/game-of-life-python" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Game of Life</a> and the <a href="https://github.com/igorjoz/css-processor" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">CSS Processor</a> for Algorithms & Data Structures course.
+                            🎯 Other notable work: <a href="https://forcen.pl/" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Forcen</a> (LLM chatbot integration + RAG grounded in company data) and the <span className="text-pink-300 font-semibold">Driving Course for AI</span> project (Unity + ML).
                         </p>
                     </div>
 

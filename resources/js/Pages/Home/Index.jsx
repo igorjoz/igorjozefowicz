@@ -145,15 +145,19 @@ export default function Index() {
 
                     <div className="space-y-8 text-white text-xl sm:text-2xl md:text-3xl leading-relaxed">
                         <p>
-                            Hello there! I'm Igor Józefowicz, also known as <a href="https://github.com/igorjoz" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">@igorjoz</a>. Since 2018, I've been immersed in web development, focusing on PHP & Laravel to create impactful digital solutions. I complement my technical endeavors with academic studies in Computer Science at Gdańsk University of Technology.
+                            Hello there! I'm Igor Józefowicz — also known as <a href="https://github.com/igorjoz" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">@igorjoz</a>. Since 2018, I’ve been developing web and AI-powered applications using PHP, Laravel, and React. I currently work as a Full Stack Developer at Matysart, creating modern, scalable digital solutions.
                         </p>
 
                         <p>
-                            As a passionate educator, I teach programming at Giganci Programowania, covering topics from Hacking & Cybersecurity to Python and C++. When not teaching, I enjoy challenging myself with Competitive Programming contests and deepening my understanding of Computer Architecture & Assembly, alongside Database Design.
+                            I study Computer Science at the <a href="https://pg.edu.pl/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">Gdańsk University of Technology</a>, focusing on machine learning, deep learning models, and software architecture. I enjoy turning complex ideas into practical, intelligent software.
                         </p>
 
                         <p>
-                            I'm excited to connect with fellow tech enthusiasts and professionals. Explore my website to learn more about my work or reach out on <a href="https://www.linkedin.com/in/igor-jozefowicz/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">LinkedIn</a>. For collaborations or inquiries, don't hesitate to send me an email: <a href="mailto:igor@jozefowicz.pl" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">igor@jozefowicz.pl</a>.
+                            As an educator, I teach an Artificial Intelligence course at <a href="https://www.giganciprogramowania.edu.pl/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">Coding Giants</a>, guiding students through neural networks, computer vision, and Python-based AI projects while inspiring curiosity about modern technology.
+                        </p>
+
+                        <p>
+                            I’m always excited to connect with fellow tech enthusiasts and professionals. Explore my website to learn more about my work or reach out on <a href="https://www.linkedin.com/in/igor-jozefowicz/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">LinkedIn</a>. For collaborations or inquiries, email me at <a href="mailto:igor@jozefowicz.pl" className="text-pink-500 hover:text-pink-600 underline decoration-wavy transition-all hover:scale-105 inline-block">igor@jozefowicz.pl</a>.
                         </p>
                     </div>
 

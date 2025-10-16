@@ -151,7 +151,7 @@
 
             <a href="https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-card__link">View documentation</a>
 
-            <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
+            <a href="https://github.com/igorjoz/driving-course-for-ai" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
         </div>
     </div>
 

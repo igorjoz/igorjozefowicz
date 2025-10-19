@@ -12,11 +12,12 @@
         align-items: center;
         flex-direction: column;
 
+        overflow: hidden;
     }
 
     &__image {
         width: 100%;
-        height: 220px;
+        // height: 220px;
         transition: transform 0.3s ease-in-out;
 
         &--short {
@@ -25,11 +26,19 @@
             padding-top: 35px;
             padding-bottom: 35px;
         }
+
+        &--vento {
+            transform: scale(1.3);
+        }
     }
 
     &:hover {
         .project-card__image {
             transform: scale(1.1);
+        }
+
+        .project-card__image--vento {
+            transform: scale(1.5);
         }
     }
 
@@ -44,6 +53,8 @@
         color: #666;
         font-size: 2.4rem;
         margin-bottom: 0.5rem;
+
+        text-align: center;
     }
 
     &__description {
@@ -51,22 +62,79 @@
         color: #666;
     }
 
+    &__tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 10px 0 6px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            font-size: 1.2rem;
+            color: #b04b65;
+            background: rgba(255, 147, 165, 0.15);
+            border: 1px solid rgba(255, 147, 165, 0.35);
+            padding: 6px 10px;
+            border-radius: 999px;
+            line-height: 1;
+            white-space: nowrap;
+        }
+    }
+
     &__link {
         font-size: 1.6rem;
         display: inline-block;
-        padding: 0.8rem 1rem;
+        padding: 0.9rem 1.2rem;
         margin-top: 1rem;
-        background-color: rgb(255, 147, 165);
         color: #fff;
         text-decoration: none;
         border-radius: 6px;
         text-align: center;
-        transition: background-color 0.3s ease, color 0.3s ease;
 
+        // Modern gradient background with subtle animation
+        background: linear-gradient(135deg, #ff7aa2 0%, #ff92ae 50%, #ff8da1 100%);
+        background-size: 200% 200%;
+
+        // Interaction + elevation
+        box-shadow: 0 6px 14px rgba(255, 147, 165, 0.28);
+        will-change: transform;
+        transition:
+            transform 150ms ease,
+            box-shadow 200ms ease,
+            background-position 600ms ease,
+            color 150ms ease;
+
+        // Focus state for accessibility
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            box-shadow:
+                0 0 0 3px rgba(255, 147, 165, 0.45),
+                0 8px 18px rgba(255, 147, 165, 0.35);
+        }
+
+        // Hover / active interactions (no resize to avoid jump)
         &:hover {
-            background-color: darken(rgb(255, 147, 165), 20%);
+            background-position: 100% 0%;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 22px rgba(255, 147, 165, 0.36);
             color: #fff;
             text-decoration: none;
+        }
+
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 12px rgba(255, 147, 165, 0.25);
+        }
+
+        // Reduced motion support
+        @media (prefers-reduced-motion: reduce) {
+            transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+            transform: none !important;
+            background-position: 0 0 !important;
         }
     }
 }

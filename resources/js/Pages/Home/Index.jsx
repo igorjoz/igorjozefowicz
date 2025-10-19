@@ -61,17 +61,17 @@ export default function Index() {
             ],
             year: '2022'
         },
-        {
-            imgSrc: storageUrl('public/projects/driving-course-for-ai.webp'),
-            imgAlt: 'Driving Course for AI',
-            title: 'Driving Course for AI',
-            description: 'Machine learning project made with Unity. And a bit of love!',
-            links: [
-                { text: 'View documentation', url: 'https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing' },
-                { text: 'View repository', url: 'https://github.com/igorjoz/anon-surv' }
-            ],
-            year: '2024'
-        },
+                {
+                    imgSrc: storageUrl('public/projects/driving-course-for-ai.webp'),
+                    imgAlt: 'Driving Course for AI',
+                    title: 'Driving Course for AI',
+                    description: 'Machine learning project made with Unity. And a bit of love!',
+                    links: [
+                        { text: 'View documentation', url: 'https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing' },
+                        { text: 'View repository', url: 'https://github.com/igorjoz/driving-course-for-ai' }
+                    ],
+                    year: '2024'
+                },
         {
             imgSrc: storageUrl('public/projects/vulnerability-vault.webp'),
             imgAlt: 'Vulnerability Vault',

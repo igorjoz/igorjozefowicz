@@ -257,7 +257,7 @@ export default function Index() {
             <section className="pt-6 pb-20 px-4" id="project-cards">
                 <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto">
                     {/* Top, always-static grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 2xl:gap-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-8 2xl:gap-10">
                         {topProjects.map((project, index) => (
                             <ProjectCard
                                 key={index}
@@ -276,9 +276,9 @@ export default function Index() {
 
                     {/* Bottom, revealed grid with subtle entrance animation; doesn't reflow above */}
                     {showMore && (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 2xl:gap-10 mt-8 md:mt-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 items-stretch gap-8 2xl:gap-10 mt-8 md:mt-10">
                             {bottomProjects.map((project, index) => (
-                                <div key={`bottom-${index}`} className={index % 2 === 0 ? 'anim-fade-slide-in' : 'anim-fade-slide-in-slow'}>
+                                <div key={`bottom-${index}`} className={(index % 2 === 0 ? 'anim-fade-slide-in' : 'anim-fade-slide-in-slow') + ' h-full'}>
                                     <ProjectCard
                                         imgSrc={project.imgSrc}
                                         imgAlt={project.imgAlt}

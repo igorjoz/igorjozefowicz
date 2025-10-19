@@ -45,7 +45,7 @@ export default function ProjectCard({ imgSrc, imgAlt, title, description, links,
             : 'group-hover:scale-[1.08]';
 
     return (
-        <Card className="flex flex-col">
+        <Card className="flex flex-col h-full">
             <CardMedia className={`${mediaClass} group ${(isForcen || isVento) ? 'bg-white' : ''}`}> 
                 {year && (
                     <span className="absolute top-3 right-3 z-10 text-[1.2rem] font-semibold px-3 py-1 rounded-full shadow-sm bg-[rgba(28,28,34,0.85)] text-white ring-1 ring-white/10">

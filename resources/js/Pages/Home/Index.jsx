@@ -105,7 +105,7 @@ export default function Index() {
             technologies: ['Laravel', 'MySQL', 'Blade']
         },
         {
-            imgSrc: storageUrl('public/projects/anonymous-surveys.webp'),
+            imgSrc: storageUrl('public/projects/anonymous-surveys.png'),
             imgAlt: 'Anonymous Surveys',
             title: 'Anonymous Surveys',
             description: 'A Laravel app that allows users to create anonymous surveys.',

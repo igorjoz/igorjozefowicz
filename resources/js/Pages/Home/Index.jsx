@@ -45,6 +45,52 @@ export default function Index() {
             technologies: ['Laravel', 'MySQL', 'Blade', 'Sass', 'BEM', 'Przelewy24', 'Algolia']
         },
         {
+            imgSrc: storageUrl('public/projects/tytani-bi.png'),
+            imgAlt: 'Tytani BI',
+            title: 'Tytani BI',
+            description: 'Online school system with emphasis on data warehousing and system design. Includes a data warehouse model, ETL considerations and star-schema layouts, plus UML diagrams (class, sequence and component) to document data flows and architecture.',
+            links: [
+                { text: 'View repository', url: 'https://github.com/igorjoz/tytani-bi-online-school-system' }
+            ],
+            year: '2025',
+            technologies: ['Python', 'SQL', 'T-SQL', 'Data Warehouse', 'ETL', 'Star Schema', 'PowerBI', 'UML']
+        },
+        {
+            imgSrc: storageUrl('public/projects/monsteriada.png'),
+            imgAlt: 'Monsteriada Prestashop',
+            title: 'Monsteriada Prestashop',
+            description: 'A Prestashop-based online shop clone for Monsteriada — theming, module development and payment integration. Includes catalog customization, migrations and frontend theming work to match the original storefront.',
+            links: [
+                { text: 'View repository', url: 'https://github.com/igorjoz/monsteriada-prestashop-clone' }
+            ],
+            year: '2022',
+            technologies: ['PHP', 'PrestaShop', 'Smarty', 'MySQL', 'Docker', 'Web scraping', 'Selenium']
+        },
+        {
+            imgSrc: storageUrl('public/projects/driving-course-for-ai.webp'),
+            imgAlt: 'Driving Course for AI',
+            title: 'Driving Course for AI',
+            description: 'Machine learning project made with Unity. And a bit of love!',
+            links: [
+                { text: 'View documentation', url: 'https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing' },
+                { text: 'View repository', url: 'https://github.com/igorjoz/driving-course-for-ai' }
+            ],
+            year: '2024',
+            technologies: ['Unity', 'C#', 'ML-Agents', 'Tensorboard']
+        },
+        {
+            imgSrc: storageUrl('public/projects/vulnerability-vault.png'),
+            imgAlt: 'Vulnerability Vault',
+            title: 'Vulnerability Vault',
+            description: 'Do you want to learn hacking? Check out my cybersec project.',
+            links: [
+                { text: 'View website', url: 'https://igorjozefowicz.com/' },
+                { text: 'View repository', url: 'https://github.com/igorjoz/vulnerability-vault' }
+            ],
+            year: '2024',
+            technologies: ['PHP', 'MySQL']
+        },
+        {
             imgSrc: storageUrl('public/projects/employees_directory.webp'),
             imgAlt: 'Employees Directory',
             title: 'Employees Directory',
@@ -65,30 +111,6 @@ export default function Index() {
             ],
             year: '2022',
             technologies: ['Laravel', 'MySQL', 'Blade']
-        },
-                {
-                    imgSrc: storageUrl('public/projects/driving-course-for-ai.webp'),
-                    imgAlt: 'Driving Course for AI',
-                    title: 'Driving Course for AI',
-                    description: 'Machine learning project made with Unity. And a bit of love!',
-                    links: [
-                        { text: 'View documentation', url: 'https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing' },
-                        { text: 'View repository', url: 'https://github.com/igorjoz/driving-course-for-ai' }
-                    ],
-                    year: '2024',
-                    technologies: ['Unity', 'C#', 'ML-Agents', 'Tensorboard']
-                },
-        {
-            imgSrc: storageUrl('public/projects/vulnerability-vault.png'),
-            imgAlt: 'Vulnerability Vault',
-            title: 'Vulnerability Vault',
-            description: 'Do you want to learn hacking? Check out my cybersec project.',
-            links: [
-                { text: 'View website', url: 'https://igorjozefowicz.com/' },
-                { text: 'View repository', url: 'https://github.com/igorjoz/vulnerability-vault' }
-            ],
-            year: '2024',
-            technologies: ['PHP', 'MySQL']
         },
         {
             imgSrc: storageUrl('public/projects/game-of-life.webp'),

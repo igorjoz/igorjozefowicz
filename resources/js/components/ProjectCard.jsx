@@ -3,7 +3,7 @@ import Card, { CardBody, CardMedia } from '@/Components/Card';
 import Button from '@/Components/Button';
 
 // ProjectCard component
-export default function ProjectCard({ imgSrc, imgAlt, title, description, links, isShortImage = false, extraClass = '', year }) {
+export default function ProjectCard({ imgSrc, imgAlt, title, description, links, isShortImage = false, extraClass = '', year, technologies = [] }) {
         const handleImgError = (e) => {
                 if (!e?.currentTarget) return;
                 // Prevent infinite loop
@@ -66,6 +66,18 @@ export default function ProjectCard({ imgSrc, imgAlt, title, description, links,
                 <p className="text-[1.7rem] text-[var(--color-muted)] mb-6 flex-grow">
                     {description}
                 </p>
+                {Array.isArray(technologies) && technologies.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-5">
+                        {technologies.map((tech, idx) => (
+                            <span
+                                key={`${title}-tech-${idx}`}
+                                className="inline-flex items-center rounded-full bg-[rgba(255,147,165,0.15)] text-pink-200 ring-1 ring-pink-300/30 px-3 py-1 text-[1.2rem] font-medium"
+                            >
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                )}
                 <div className="flex flex-col gap-3 mt-auto">
                     {links && links.map((link, index) => (
                         <Button key={index} href={link.url}>

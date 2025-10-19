@@ -15,7 +15,8 @@ export default function Index() {
             links: [
                 { text: 'View organization', url: 'https://github.com/LarynxAI' }
             ],
-            year: '2025'
+            year: '2025',
+            technologies: ['Python', 'Tensorflow', 'Keras', 'numpy', 'scikit-learn', 'FastAPI']
         },
         {
             imgSrc: storageUrl('public/projects/forcen-logo.svg'),
@@ -27,7 +28,8 @@ export default function Index() {
             ],
             isShortImage: true,
             extraClass: 'project-card__image--forcen',
-            year: '2025'
+            year: '2025',
+            technologies: ['Laravel', 'React', 'Tailwind', 'LLM API', 'RAG']
         },
         {
             imgSrc: storageUrl('public/projects/vento-logo.svg'),
@@ -39,7 +41,8 @@ export default function Index() {
             ],
             isShortImage: true,
             extraClass: 'project-card__image--vento',
-            year: '2020'
+            year: '2020',
+            technologies: ['Laravel', 'MySQL', 'Blade', 'Sass', 'BEM', 'Przelewy24', 'Algolia']
         },
         {
             imgSrc: storageUrl('public/projects/employees_directory.webp'),
@@ -49,7 +52,8 @@ export default function Index() {
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/employees_directory' }
             ],
-            year: '2022'
+            year: '2022',
+            technologies: ['Laravel', 'MySQL', 'Blade']
         },
         {
             imgSrc: storageUrl('public/projects/anonymous-surveys.webp'),
@@ -59,7 +63,8 @@ export default function Index() {
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/anon-surv' }
             ],
-            year: '2022'
+            year: '2022',
+            technologies: ['Laravel', 'MySQL', 'Blade']
         },
                 {
                     imgSrc: storageUrl('public/projects/driving-course-for-ai.webp'),
@@ -70,7 +75,8 @@ export default function Index() {
                         { text: 'View documentation', url: 'https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing' },
                         { text: 'View repository', url: 'https://github.com/igorjoz/driving-course-for-ai' }
                     ],
-                    year: '2024'
+                    year: '2024',
+                    technologies: ['Unity', 'C#', 'ML-Agents', 'Tensorboard']
                 },
         {
             imgSrc: storageUrl('public/projects/vulnerability-vault.png'),
@@ -81,7 +87,8 @@ export default function Index() {
                 { text: 'View website', url: 'https://igorjozefowicz.com/' },
                 { text: 'View repository', url: 'https://github.com/igorjoz/vulnerability-vault' }
             ],
-            year: '2024'
+            year: '2024',
+            technologies: ['PHP', 'MySQL']
         },
         {
             imgSrc: storageUrl('public/projects/game-of-life.webp'),
@@ -92,7 +99,8 @@ export default function Index() {
                 { text: 'View Python repository', url: 'https://github.com/igorjoz/game-of-life-python' },
                 { text: 'View Java repository', url: 'https://github.com/igorjoz/game-of-life-java' }
             ],
-            year: '2023'
+            year: '2023',
+            technologies: ['Python', 'Pygame', 'Java', 'Spring']
         },
         {
             imgSrc: storageUrl('public/projects/finance-and-investing.webp'),
@@ -102,7 +110,8 @@ export default function Index() {
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/finance-and-investing/tree/main/src' }
             ],
-            year: '2022'
+            year: '2022',
+            technologies: ['PHP', 'JavaScript', 'MongoDB']
         },
         {
             imgSrc: storageUrl('public/projects/matura.webp'),
@@ -112,7 +121,8 @@ export default function Index() {
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/matura' }
             ],
-            year: '2021'
+            year: '2021',
+            technologies: ['C++', 'Python', 'Algorithms', 'SQL', 'Access', 'Excel']
         }
     ];
 
@@ -204,7 +214,7 @@ export default function Index() {
                         </p>
 
                         <p>
-                            🎯 Other notable work: <a href="https://forcen.pl/" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Forcen</a> (LLM chatbot integration + RAG grounded in company data) and the <span className="text-pink-300 font-semibold">Driving Course for AI</span> project (Unity + ML).
+                            🎯 Other notable work: <a href="https://forcen.pl/" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Forcen</a> (LLM chatbot integration + RAG grounded in company data) and the <a href="https://github.com/igorjoz/driving-course-for-ai" target="_blank" rel="noopener noreferrer" className="text-pink-300 font-semibold hover:text-pink-200 underline decoration-wavy transition-all inline-block">Driving Course for AI</a> project (Unity + ML).
                         </p>
                     </div>
 
@@ -229,6 +239,7 @@ export default function Index() {
                                 isShortImage={project.isShortImage}
                                 extraClass={project.extraClass}
                                 year={project.year}
+                                technologies={project.technologies}
                             />
                         ))}
                     </div>

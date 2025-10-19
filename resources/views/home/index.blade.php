@@ -113,6 +113,12 @@
         <div class="project-card__content">
             <h3 class="project-card__title">Vento Kominki Website&nbsp;& Online Shop</h3>
             <p class="project-card__description">A comprehensive Laravel web application for Vento, focusing on heating and ventilation solutions. Developed in 2020-2021.</p>
+            <ul class="project-card__tech">
+                <li>Laravel</li>
+                <li>MySQL</li>
+                <li>Blade</li>
+                <li>Sass</li>
+            </ul>
             <a href="https://www.e-kominki.com/" target="_blank" rel="noopener noreferrer" class="project-card__link">Visit website</a>
         </div>
     </div>
@@ -124,6 +130,11 @@
         <div class="project-card__content">
             <h3 class="project-card__title">Employees Directory</h3>
             <p class="project-card__description">A Laravel app for managing employees and departments.</p>
+            <ul class="project-card__tech">
+                <li>Laravel</li>
+                <li>MySQL</li>
+                <li>Blade</li>
+            </ul>
             <a href="https://github.com/igorjoz/employees_directory" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
         </div>
     </div>
@@ -135,6 +146,11 @@
         <div class="project-card__content">
             <h3 class="project-card__title">Anonymous Surveys</h3>
             <p class="project-card__description">A Laravel app that allows users to create anonymous surveys.</p>
+            <ul class="project-card__tech">
+                <li>Laravel</li>
+                <li>PostgreSQL</li>
+                <li>Chart.js</li>
+            </ul>
             <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
         </div>
     </div>
@@ -149,6 +165,12 @@
 
             <p class="project-card__description">Machine learning project made with Unity. And a bit of love!</p>
 
+            <ul class="project-card__tech">
+                <li>Unity</li>
+                <li>ML-Agents</li>
+                <li>C#</li>
+            </ul>
+
             <a href="https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-card__link">View documentation</a>
 
             <a href="https://github.com/igorjoz/driving-course-for-ai" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
@@ -162,6 +184,11 @@
         <div class="project-card__content">
             <h3 class="project-card__title">Vulnerability Vault</h3>
             <p class="project-card__description">Do you want to learn hacking? Check out my cybersec project.</p>
+            <ul class="project-card__tech">
+                <li>Laravel</li>
+                <li>Tailwind</li>
+                <li>Docker</li>
+            </ul>
             <a href="https://igorjozefowicz.com/" target="_blank" rel="noopener noreferrer" class="project-card__link">View website</a>
             <a href="https://github.com/igorjoz/vulnerability-vault" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
         </div>
@@ -177,6 +204,13 @@
 
             <p class="project-card__description">A turn-based game written in Python, pygame and Java, Spring</p>
 
+            <ul class="project-card__tech">
+                <li>Python</li>
+                <li>Pygame</li>
+                <li>Java</li>
+                <li>Spring</li>
+            </ul>
+
             <a href="https://github.com/igorjoz/game-of-life-python" target="_blank" rel="noopener noreferrer" class="project-card__link">View Python repository</a>
 
             <a href="https://github.com/igorjoz/game-of-life-java" target="_blank" rel="noopener noreferrer" class="project-card__link">View Java repository</a>
@@ -190,6 +224,10 @@
         <div class="project-card__content">
             <h3 class="project-card__title">Spy Hunter Game</h3>
             <p class="project-card__description">An Atari 2600-styled game created with C++ & SDL library.</p>
+            <ul class="project-card__tech">
+                <li>C++</li>
+                <li>SDL2</li>
+            </ul>
             <a href="https://github.com/igorjoz/spy-hunter-game" target="_blank" rel="noopener noreferrer" class="project-card__link">View Repository</a>
         </div>
     </div>
@@ -201,6 +239,11 @@
         <div class="project-card__content">
             <h3 class="project-card__title">Finance and Investing</h3>
             <p class="project-card__description">A PHP application created without backend framework.</p>
+            <ul class="project-card__tech">
+                <li>PHP</li>
+                <li>Vanilla JS</li>
+                <li>MySQL</li>
+            </ul>
             <a href="https://github.com/igorjoz/finance-and-investing/tree/main/src" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
         </div>
     </div>
@@ -212,6 +255,10 @@
         <div class="project-card__content">
             <h3 class="project-card__title">Matura Exam Solutions</h3>
             <p class="project-card__description">Solutions for 2014-2022 Polish Matura exam sheets.</p>
+            <ul class="project-card__tech">
+                <li>C++</li>
+                <li>Algorithms</li>
+            </ul>
             <a href="https://github.com/igorjoz/matura" target="_blank" rel="noopener noreferrer" class="project-card__link">View repository</a>
         </div>
     </div>

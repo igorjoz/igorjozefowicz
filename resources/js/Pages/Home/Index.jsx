@@ -1,4 +1,5 @@
 import { Head } from '@inertiajs/react';
+import { useMemo, useState } from 'react';
 import Layout from '@/Layouts/Layout';
 import SocialLink from '@/Components/SocialLink';
 import ScrollArrow from '@/Components/ScrollArrow';
@@ -6,6 +7,8 @@ import ProjectCard from '@/Components/ProjectCard';
 import { storageUrl } from '@/utils/assets';
 
 export default function Index() {
+    // State to toggle showing the last 4 projects
+    const [showMore, setShowMore] = useState(false);
     const projects = [
         {
             imgSrc: storageUrl('public/projects/larynxai.png'),
@@ -148,6 +151,10 @@ export default function Index() {
         }
     ];
 
+    const initialVisibleCount = Math.max(projects.length - 4, 0);
+    const topProjects = useMemo(() => projects.slice(0, initialVisibleCount), [projects, initialVisibleCount]);
+    const bottomProjects = useMemo(() => projects.slice(initialVisibleCount), [projects, initialVisibleCount]);
+
     return (
         <Layout>
             <Head title="Home" />
@@ -249,8 +256,9 @@ export default function Index() {
             {/* Reduced top padding to pull cards closer to arrow */}
             <section className="pt-6 pb-20 px-4" id="project-cards">
                 <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto">
+                    {/* Top, always-static grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 2xl:gap-10">
-                        {projects.map((project, index) => (
+                        {topProjects.map((project, index) => (
                             <ProjectCard
                                 key={index}
                                 imgSrc={project.imgSrc}
@@ -265,6 +273,56 @@ export default function Index() {
                             />
                         ))}
                     </div>
+
+                    {/* Bottom, revealed grid with subtle entrance animation; doesn't reflow above */}
+                    {showMore && (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 2xl:gap-10 mt-8 md:mt-10">
+                            {bottomProjects.map((project, index) => (
+                                <div key={`bottom-${index}`} className={index % 2 === 0 ? 'anim-fade-slide-in' : 'anim-fade-slide-in-slow'}>
+                                    <ProjectCard
+                                        imgSrc={project.imgSrc}
+                                        imgAlt={project.imgAlt}
+                                        title={project.title}
+                                        description={project.description}
+                                        links={project.links}
+                                        isShortImage={project.isShortImage}
+                                        extraClass={project.extraClass}
+                                        year={project.year}
+                                        technologies={project.technologies}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
+                    {/* Show More Button */}
+                    {!showMore && projects.length > initialVisibleCount && (
+                        <div className="flex justify-center mt-10 md:mt-14">
+                            <button
+                                type="button"
+                                aria-label="Show more projects"
+                                onClick={() => setShowMore(true)}
+                                className="group relative inline-flex items-center gap-4 rounded-[28px] px-12 py-6 text-2xl md:text-3xl font-semibold text-white transition-all duration-300 focus:outline-none focus-visible:ring-4 focus-visible:ring-pink-400/40 shadow-2xl hover:-translate-y-[2px] active:translate-y-0 cursor-pointer min-w-[18rem] md:min-w-[22rem]"
+                            >
+                                {/* Glow layer */}
+                                <span className="pointer-events-none absolute inset-0 rounded-[28px] bg-gradient-to-r from-pink-500 via-fuchsia-500 to-indigo-500 blur-lg opacity-70 group-hover:opacity-95 transition-opacity"></span>
+                                {/* Main button surface (glass) */}
+                                <span className="relative z-10 rounded-[28px] bg-white/10 backdrop-blur-xl border border-white/10 shadow-lg shadow-pink-500/20 group-hover:shadow-pink-500/40 transition-all">
+                                    <span className="flex items-center gap-4 px-12 py-6">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            className="w-7 h-7 md:w-8 md:h-8 opacity-90 group-hover:opacity-100"
+                                        >
+                                            <path d="M11.47 15.78a.75.75 0 0 0 1.06 0l5.25-5.25a.75.75 0 1 0-1.06-1.06L12 13.44 7.28 9.47a.75.75 0 1 0-1.06 1.06l5.25 5.25Z" />
+                                        </svg>
+                                        <span className="tracking-wide">Show 4 more projects</span>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    )}
                 </div>
             </section>
         </Layout>

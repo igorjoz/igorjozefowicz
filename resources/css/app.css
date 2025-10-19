@@ -270,6 +270,20 @@ h1, h2, h3, .display { font-family: var(--font-display); letter-spacing: -0.02em
     }
 }
 
+/* Subtle fade + slide-in animation for revealed project cards */
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.anim-fade-slide-in { animation: fadeSlideIn 360ms cubic-bezier(.16,1,.3,1) forwards; will-change: transform, opacity; }
+.anim-fade-slide-in-slow { animation: fadeSlideIn 460ms cubic-bezier(.16,1,.3,1) forwards; will-change: transform, opacity; }
+
+@media (prefers-reduced-motion: reduce) {
+    .anim-fade-slide-in,
+    .anim-fade-slide-in-slow { animation: none !important; }
+}
+
 /* Hero specific typography */
 .hero-name,
 .hero-title {

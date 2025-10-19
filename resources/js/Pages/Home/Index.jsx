@@ -18,7 +18,7 @@ export default function Index() {
             year: '2025'
         },
         {
-            imgSrc: storageUrl('public/projects/logo-forcen.svg'),
+            imgSrc: storageUrl('public/projects/forcen-logo.svg'),
             imgAlt: 'Forcen',
             title: 'Forcen',
             description: 'Business website with AI features. Implemented chatbot integration with an LLM API provider and a RAG (Retrieval-Augmented Generation) system to ground answers in company data.',
@@ -73,7 +73,7 @@ export default function Index() {
                     year: '2024'
                 },
         {
-            imgSrc: storageUrl('public/projects/vulnerability-vault.webp'),
+            imgSrc: storageUrl('public/projects/vulnerability-vault.png'),
             imgAlt: 'Vulnerability Vault',
             title: 'Vulnerability Vault',
             description: 'Do you want to learn hacking? Check out my cybersec project.',

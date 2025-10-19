@@ -157,7 +157,7 @@
 
     <div class="project-card">
         <div class="project-card__image-wrapper">
-            <img src="{{ Storage::url('public/projects/vulnerability-vault.webp') }}" alt="Anonymous Surveys" class="project-card__image">
+            <img src="{{ Storage::url('public/projects/vulnerability-vault.png') }}" alt="Anonymous Surveys" class="project-card__image">
         </div>
         <div class="project-card__content">
             <h3 class="project-card__title">Vulnerability Vault</h3>

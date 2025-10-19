@@ -125,7 +125,7 @@
 
     <div class="project-card">
         <div class="project-card__image-wrapper">
-            <img src="{{ Storage::url('public/projects/employees_directory.webp') }}" alt="Employees Directory" class="project-card__image">
+            <img src="{{ Storage::url('public/projects/employees-directory.webp') }}" alt="Employees Directory" class="project-card__image">
         </div>
         <div class="project-card__content">
             <h3 class="project-card__title">Employees Directory</h3>
@@ -141,7 +141,7 @@
 
     <div class="project-card">
         <div class="project-card__image-wrapper">
-            <img src="{{ Storage::url('public/projects/anonymous-surveys.png') }}" alt="Anonymous Surveys" class="project-card__image">
+            <img src="{{ Storage::url('public/projects/anonymous-surveys.jpg') }}" alt="Anonymous Surveys" class="project-card__image">
         </div>
         <div class="project-card__content">
             <h3 class="project-card__title">Anonymous Surveys</h3>
@@ -179,7 +179,7 @@
 
     <div class="project-card">
         <div class="project-card__image-wrapper">
-            <img src="{{ Storage::url('public/projects/vulnerability-vault.png') }}" alt="Anonymous Surveys" class="project-card__image">
+            <img src="{{ Storage::url('public/projects/vulnerability-vault.jpg') }}" alt="Anonymous Surveys" class="project-card__image">
         </div>
         <div class="project-card__content">
             <h3 class="project-card__title">Vulnerability Vault</h3>

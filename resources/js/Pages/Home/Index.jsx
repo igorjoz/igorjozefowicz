@@ -11,7 +11,7 @@ export default function Index() {
     const [showMore, setShowMore] = useState(false);
     const projects = [
         {
-            imgSrc: storageUrl('public/projects/larynxai.png'),
+            imgSrc: storageUrl('public/projects/larynxai.jpg'),
             imgAlt: 'LarynxAI',
             title: 'LarynxAI',
             description: 'A system for dataset management and photo tagging; my part focused on building a classifier for laryngeal diseases.',
@@ -48,7 +48,7 @@ export default function Index() {
             technologies: ['Laravel', 'MySQL', 'Blade', 'Sass', 'BEM', 'Przelewy24', 'Algolia']
         },
         {
-            imgSrc: storageUrl('public/projects/tytani-bi.png'),
+            imgSrc: storageUrl('public/projects/tytani-bi.jpg'),
             imgAlt: 'Tytani BI',
             title: 'Tytani BI',
             description: 'Online school system with emphasis on data warehousing and system design. Includes a data warehouse model, ETL considerations and star-schema layouts, plus UML diagrams (class, sequence and component) to document data flows and architecture.',
@@ -59,7 +59,7 @@ export default function Index() {
             technologies: ['Python', 'SQL', 'T-SQL', 'Data Warehouse', 'ETL', 'Star Schema', 'PowerBI', 'UML']
         },
         {
-            imgSrc: storageUrl('public/projects/monsteriada.png'),
+            imgSrc: storageUrl('public/projects/monsteriada.jpg'),
             imgAlt: 'Monsteriada Prestashop',
             title: 'Monsteriada Prestashop',
             description: 'A Prestashop-based online shop clone for Monsteriada — theming, module development and payment integration. Includes catalog customization, migrations and frontend theming work to match the original storefront.',
@@ -82,7 +82,7 @@ export default function Index() {
             technologies: ['Unity', 'C#', 'ML-Agents', 'Tensorboard']
         },
         {
-            imgSrc: storageUrl('public/projects/vulnerability-vault.png'),
+            imgSrc: storageUrl('public/projects/vulnerability-vault.jpg'),
             imgAlt: 'Vulnerability Vault',
             title: 'Vulnerability Vault',
             description: 'Do you want to learn hacking? Check out my cybersec project.',
@@ -94,7 +94,7 @@ export default function Index() {
             technologies: ['PHP', 'MySQL']
         },
         {
-            imgSrc: storageUrl('public/projects/employees_directory.webp'),
+            imgSrc: storageUrl('public/projects/employees-directory.webp'),
             imgAlt: 'Employees Directory',
             title: 'Employees Directory',
             description: 'A Laravel app for managing employees and departments.',
@@ -105,7 +105,7 @@ export default function Index() {
             technologies: ['Laravel', 'MySQL', 'Blade']
         },
         {
-            imgSrc: storageUrl('public/projects/anonymous-surveys.png'),
+            imgSrc: storageUrl('public/projects/anonymous-surveys.jpg'),
             imgAlt: 'Anonymous Surveys',
             title: 'Anonymous Surveys',
             description: 'A Laravel app that allows users to create anonymous surveys.',

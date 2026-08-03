@@ -9,6 +9,8 @@ class IndexPageTest extends TestCase
 {
     public function test_index_page_loads_correctly(): void
     {
+        $this->withoutVite();
+
         $response = $this->get('/');
 
         $response->assertOk();

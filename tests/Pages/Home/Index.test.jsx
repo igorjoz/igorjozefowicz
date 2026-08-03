@@ -58,7 +58,9 @@ describe('Home Page Integration', () => {
     const anonymousSurveysElements = screen.getAllByText('Anonymous Surveys');
     expect(anonymousSurveysElements.length).toBeGreaterThan(0);
     
-    expect(screen.getByText('Driving Course for AI')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 3, name: 'Driving Course for AI' })
+    ).toBeInTheDocument();
   });
 
   it('renders all project links', () => {

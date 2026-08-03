@@ -65,6 +65,6 @@ describe('SocialLink Component', () => {
     
     const groupDiv = container.querySelector('.group');
     expect(groupDiv).toBeInTheDocument();
-    expect(groupDiv).toHaveClass('transition-all', 'duration-150');
+    expect(groupDiv).toHaveClass('transition-all', 'duration-300');
   });
 });

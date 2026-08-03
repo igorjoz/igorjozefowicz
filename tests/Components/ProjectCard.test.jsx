@@ -56,7 +56,9 @@ describe('ProjectCard Component', () => {
     render(<ProjectCard {...mockProject} />);
     
     const link = screen.getByText('View Repository');
-    expect(link.className).toContain('text-white');
-    expect(link.style.backgroundColor).toBe('rgb(255, 147, 165)');
+    expect(link).toHaveClass('text-white');
+    expect(link.className).toContain(
+      'bg-[linear-gradient(135deg,_#ff7aa2_0%,_#ff92ae_50%,_#ff8da1_100%)]'
+    );
   });
 });

@@ -29,7 +29,6 @@ describe('ScrollArrow Component', () => {
     render(<ScrollArrow targetId="test-section" />);
     
     const link = screen.getByRole('link');
-    expect(link.className).toContain('hover:text-pink-300');
-    expect(link.className).toContain('transition-colors');
+    expect(link).toHaveClass('hover:text-[var(--color-primary)]', 'transition-colors');
   });
 });

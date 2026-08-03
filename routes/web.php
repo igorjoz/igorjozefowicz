@@ -47,5 +47,4 @@ Route::get('/g', [WorkController::class, "giganciProgramowania"]);
 Route::get('/gp', [WorkController::class, "giganciProgramowania"])
     ->name('work.giganci_programowania');
 
-Route::get('/gp2', [WorkController::class, "giganciProgramowania"])
-    ->name('work.giganci_programowania');
+Route::get('/gp2', [WorkController::class, "giganciProgramowania"]);

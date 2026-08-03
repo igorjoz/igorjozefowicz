@@ -62,6 +62,8 @@ rsync -a --delete \
     --exclude='.env' \
     --exclude='storage/' \
     --exclude='public/' \
+    --exclude='igorjoz_before_*' \
+    --exclude='igorjoz_public_before_*' \
     "$NEXT_DIR/" "$APP_DIR/"
 
 mkdir -p \
@@ -78,6 +80,8 @@ rsync -a "$NEXT_DIR/storage/app/public/" "$APP_DIR/storage/app/public/"
 # public_html is the Hostinger document root. Keep uploaded/storage data intact.
 rsync -a --delete \
     --exclude='storage' \
+    --exclude='igorjoz_before_*' \
+    --exclude='igorjoz_public_before_*' \
     "$NEXT_DIR/public/" "$PUBLIC_DIR/"
 
 # public/index.php originally assumes that it is inside the Laravel project.

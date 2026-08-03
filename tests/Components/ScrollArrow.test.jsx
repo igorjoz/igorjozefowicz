@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import ScrollArrow from '@/Components/ScrollArrow';
+import ScrollArrow from '@/components/ScrollArrow';
 
 describe('ScrollArrow Component', () => {
   it('renders scroll arrow with correct icon', () => {

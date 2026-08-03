@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactiveBackground from '@/Components/ReactiveBackground';
+import ReactiveBackground from '@/components/ReactiveBackground';
 
 // Layout component for Inertia.js
 export default function Layout({ children }) {

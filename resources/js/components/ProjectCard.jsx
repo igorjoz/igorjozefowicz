@@ -1,6 +1,6 @@
 import React from 'react';
-import Card, { CardBody, CardMedia } from '@/Components/Card';
-import Button from '@/Components/Button';
+import Card, { CardBody, CardMedia } from '@/components/Card';
+import Button from '@/components/Button';
 
 // ProjectCard component
 export default function ProjectCard({ imgSrc, imgAlt, title, description, links, isShortImage = false, extraClass = '', year, technologies = [] }) {

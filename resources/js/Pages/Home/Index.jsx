@@ -1,9 +1,9 @@
 import { Head } from '@inertiajs/react';
 import { useMemo, useState } from 'react';
 import Layout from '@/Layouts/Layout';
-import SocialLink from '@/Components/SocialLink';
-import ScrollArrow from '@/Components/ScrollArrow';
-import ProjectCard from '@/Components/ProjectCard';
+import SocialLink from '@/components/SocialLink';
+import ScrollArrow from '@/components/ScrollArrow';
+import ProjectCard from '@/components/ProjectCard';
 import { storageUrl } from '@/utils/assets';
 
 export default function Index() {

@@ -18,8 +18,8 @@ export default function Index() {
             links: [
                 { text: 'View organization', url: 'https://github.com/LarynxAI' }
             ],
-            year: '2025',
-            technologies: ['Python', 'Tensorflow', 'Keras', 'numpy', 'scikit-learn', 'FastAPI']
+            year: '2024–2026',
+            technologies: ['Python', 'Tensorflow', 'Keras', 'PyTorch', 'numpy', 'scikit-learn', 'FastAPI']
         },
         {
             imgSrc: storageUrl('public/projects/forcen-logo.svg'),
@@ -31,61 +31,61 @@ export default function Index() {
             ],
             isShortImage: true,
             extraClass: 'project-card__image--forcen',
-            year: '2025',
+            year: '2025–2026',
             technologies: ['Laravel', 'React', 'Tailwind', 'LLM API', 'RAG']
         },
         {
             imgSrc: storageUrl('public/projects/vento-logo.svg'),
             imgAlt: 'Vento Website',
             title: 'Vento Kominki Website & Online Shop',
-            description: 'A comprehensive Laravel web application for Vento, focusing on heating and ventilation solutions. Developed in 2020-2021.',
+            description: 'A Laravel web application and online shop for heating and ventilation solutions, expanded with React and AI-powered chatbot features grounded in company data.',
             links: [
                 { text: 'Visit website', url: 'https://www.e-kominki.com/' }
             ],
             isShortImage: true,
             extraClass: 'project-card__image--vento',
-            year: '2020',
-            technologies: ['Laravel', 'MySQL', 'Blade', 'Sass', 'BEM', 'Przelewy24', 'Algolia']
+            year: '2020–2026',
+            technologies: ['Laravel', 'MySQL', 'React', 'Sass', 'Przelewy24', 'Algolia', 'RAG', 'Chatbot', 'OpenAI API']
         },
         {
             imgSrc: storageUrl('public/projects/tytani-bi.jpg'),
             imgAlt: 'Tytani BI',
             title: 'Tytani BI',
-            description: 'Online school system with emphasis on data warehousing and system design. Includes a data warehouse model, ETL considerations and star-schema layouts, plus UML diagrams (class, sequence and component) to document data flows and architecture.',
+            description: 'A business intelligence project for an online school, covering data warehouse design, ETL pipelines, multidimensional analysis and Power BI reporting.',
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/tytani-bi-online-school-system' }
             ],
             year: '2025',
-            technologies: ['Python', 'SQL', 'T-SQL', 'Data Warehouse', 'ETL', 'Star Schema', 'PowerBI', 'UML']
+            technologies: ['Python', 'SQL', 'T-SQL', 'Data Warehouse', 'ETL', 'Star Schema', 'SSIS', 'SSAS/MDX', 'Power BI']
         },
         {
             imgSrc: storageUrl('public/projects/monsteriada.jpg'),
             imgAlt: 'Monsteriada Prestashop',
             title: 'Monsteriada Prestashop',
-            description: 'A Prestashop-based online shop clone for Monsteriada — theming, module development and payment integration. Includes catalog customization, migrations and frontend theming work to match the original storefront.',
+            description: 'A team-built PrestaShop clone of the Monsteriada online shop for the Electronic Business course, including storefront theming, Docker setup and a product data scraper.',
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/monsteriada-prestashop-clone' }
             ],
-            year: '2022',
+            year: '2024–2025',
             technologies: ['PHP', 'PrestaShop', 'Smarty', 'MySQL', 'Docker', 'Web scraping', 'Selenium']
         },
         {
             imgSrc: storageUrl('public/projects/driving-course-for-ai.webp'),
             imgAlt: 'Driving Course for AI',
             title: 'Driving Course for AI',
-            description: 'Machine learning project made with Unity. And a bit of love!',
+            description: 'Machine learning project where AI learns to park. Made with Unity ML Agents. And a bit of love!',
             links: [
                 { text: 'View documentation', url: 'https://docs.google.com/document/d/1jKZnomEy_Bo613_xQswbK1qzhcIcbXEKB5TfghTAJYg/edit?usp=sharing' },
                 { text: 'View repository', url: 'https://github.com/igorjoz/driving-course-for-ai' }
             ],
-            year: '2024',
+            year: '2024–2026',
             technologies: ['Unity', 'C#', 'ML-Agents', 'Tensorboard']
         },
         {
             imgSrc: storageUrl('public/projects/vulnerability-vault.jpg'),
             imgAlt: 'Vulnerability Vault',
             title: 'Vulnerability Vault',
-            description: 'Do you want to learn hacking? Check out my cybersec project.',
+            description: 'A cybersecurity learning application with hands-on labs for SQL injection, reflected and stored XSS, command injection and unsafe file uploads.',
             links: [
                 { text: 'View website', url: 'https://igorjozefowicz.com/' },
                 { text: 'View repository', url: 'https://github.com/igorjoz/vulnerability-vault' }
@@ -99,9 +99,9 @@ export default function Index() {
             title: 'Employees Directory',
             description: 'A Laravel app for managing employees and departments.',
             links: [
-                { text: 'View repository', url: 'https://github.com/igorjoz/employees_directory' }
+                { text: 'View repository', url: 'https://github.com/igorjoz/employees-directory' }
             ],
-            year: '2022',
+            year: '2022–2023',
             technologies: ['Laravel', 'MySQL', 'Blade']
         },
         {
@@ -119,24 +119,24 @@ export default function Index() {
             imgSrc: storageUrl('public/projects/game-of-life.webp'),
             imgAlt: 'Game of Life',
             title: 'Game of Life',
-            description: 'A turn-based game written in Python, pygame and Java, Spring.',
+            description: 'A turn-based ecosystem simulation implemented in Python with Pygame and Tkinter, and in Java with Swing.',
             links: [
                 { text: 'View Python repository', url: 'https://github.com/igorjoz/game-of-life-python' },
                 { text: 'View Java repository', url: 'https://github.com/igorjoz/game-of-life-java' }
             ],
             year: '2023',
-            technologies: ['Python', 'Pygame', 'Java', 'Spring']
+            technologies: ['Python', 'Pygame', 'Tkinter', 'Java', 'Java Swing']
         },
         {
             imgSrc: storageUrl('public/projects/finance-and-investing.webp'),
             imgAlt: 'Finance and Investing',
             title: 'Finance and Investing',
-            description: 'A PHP application created without backend framework.',
+            description: 'A personal finance and investing website built with framework-free PHP, TypeScript, SCSS and MongoDB.',
             links: [
                 { text: 'View repository', url: 'https://github.com/igorjoz/finance-and-investing/tree/main/src' }
             ],
-            year: '2022',
-            technologies: ['PHP', 'JavaScript', 'MongoDB']
+            year: '2022–2023',
+            technologies: ['PHP', 'TypeScript', 'SCSS', 'MongoDB']
         },
         {
             imgSrc: storageUrl('public/projects/matura.webp'),
@@ -144,9 +144,9 @@ export default function Index() {
             title: 'Matura Exam Solutions',
             description: 'Solutions for 2014-2022 Polish Matura exam sheets.',
             links: [
-                { text: 'View repository', url: 'https://github.com/igorjoz/matura' }
+                { text: 'View repository', url: 'https://github.com/igorjoz/matura-informatyka' }
             ],
-            year: '2021',
+            year: '2021–2025',
             technologies: ['C++', 'Python', 'Algorithms', 'SQL', 'Access', 'Excel']
         }
     ];
@@ -239,7 +239,7 @@ export default function Index() {
                         </p>
 
                         <p>
-                            ⭐ I’ve also built practical Laravel apps such as the <a href="https://github.com/igorjoz/employees_directory" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Employees Directory</a> and <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Anonymous Surveys</a>.
+                            ⭐ I’ve also built practical Laravel apps such as the <a href="https://github.com/igorjoz/employees-directory" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Employees Directory</a> and <a href="https://github.com/igorjoz/anon-surv" target="_blank" rel="noopener noreferrer" className="text-pink-300 hover:text-pink-200 underline decoration-wavy transition-all inline-block font-semibold">Anonymous Surveys</a>.
                         </p>
 
                         <p>

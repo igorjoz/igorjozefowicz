@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import React from 'react';
 
 // Mock Inertia
@@ -68,6 +68,48 @@ describe('Home Page Integration', () => {
     
     const visitWebsiteLinks = screen.getAllByText(/Visit website|View repository|View documentation/);
     expect(visitWebsiteLinks.length).toBeGreaterThan(0);
+  });
+
+  it('renders corrected project years', () => {
+    render(<Index />);
+
+    const larynxCard = screen.getByRole('heading', { level: 3, name: 'LarynxAI' }).closest('.card-border');
+    const ventoCard = screen.getByRole('heading', { level: 3, name: 'Vento Kominki Website & Online Shop' }).closest('.card-border');
+
+    expect(within(larynxCard).getByText('2024–2026')).toBeInTheDocument();
+    expect(within(ventoCard).getByText('2020–2026')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Show more projects' }));
+    const gameOfLifeCard = screen.getByRole('heading', { level: 3, name: 'Game of Life' }).closest('.card-border');
+    expect(within(gameOfLifeCard).getByText('2023')).toBeInTheDocument();
+  });
+
+  it('renders corrected technology stacks', () => {
+    render(<Index />);
+
+    const larynxCard = screen.getByRole('heading', { level: 3, name: 'LarynxAI' }).closest('.card-border');
+    const ventoCard = screen.getByRole('heading', { level: 3, name: 'Vento Kominki Website & Online Shop' }).closest('.card-border');
+
+    expect(within(larynxCard).getByText('PyTorch')).toBeInTheDocument();
+    expect(within(ventoCard).getByText('OpenAI API')).toBeInTheDocument();
+    expect(within(ventoCard).getByText('Chatbot')).toBeInTheDocument();
+    expect(within(ventoCard).queryByText('Blade')).not.toBeInTheDocument();
+    expect(within(ventoCard).queryByText('BEM')).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Show more projects' }));
+    const gameOfLifeCard = screen.getByRole('heading', { level: 3, name: 'Game of Life' }).closest('.card-border');
+    expect(within(gameOfLifeCard).getByText('Java Swing')).toBeInTheDocument();
+    expect(within(gameOfLifeCard).queryByText('Spring')).not.toBeInTheDocument();
+  });
+
+  it('uses canonical repository links and removes the misleading vulnerability website link', () => {
+    render(<Index />);
+
+    expect(document.querySelector('a[href="https://github.com/igorjoz/employees-directory"]')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Show more projects' }));
+    expect(document.querySelector('a[href="https://github.com/igorjoz/matura-informatyka"]')).toBeInTheDocument();
+    expect(document.querySelector('a[href="https://github.com/igorjoz/employees_directory"]')).not.toBeInTheDocument();
+    expect(document.querySelector('a[href="https://github.com/igorjoz/matura"]')).not.toBeInTheDocument();
   });
 
   it('applies correct styling to hero section', () => {

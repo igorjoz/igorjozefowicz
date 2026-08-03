@@ -17,8 +17,16 @@ export default defineConfig({
             '@': path.resolve(__dirname, './resources/js'),
         },
     },
-    // server: {
-    //     https: true,
-    //     host: 'localhost',
-    // },
+    server: {
+        host: '0.0.0.0',
+        port: 5174,
+        strictPort: true,
+        origin: 'http://localhost:5174',
+        cors: {
+            origin: 'http://localhost:8080',
+        },
+        hmr: {
+            host: 'localhost',
+        },
+    },
 });

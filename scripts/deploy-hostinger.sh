@@ -61,7 +61,6 @@ trap 'bring_application_up; cleanup' EXIT
 rsync -a --delete \
     --exclude='.env' \
     --exclude='storage/' \
-    --exclude='public/' \
     --exclude='igorjoz_before_*' \
     --exclude='igorjoz_public_before_*' \
     "$NEXT_DIR/" "$APP_DIR/"
@@ -94,6 +93,16 @@ sed -i \
 
 if [[ ! -e "$PUBLIC_DIR/storage" ]]; then
     ln -s "$APP_DIR/storage/app/public" "$PUBLIC_DIR/storage"
+fi
+
+if [[ ! -f "$APP_DIR/public/build/manifest.json" || ! -f "$PUBLIC_DIR/build/manifest.json" ]]; then
+    echo "Vite manifest is missing after deployment." >&2
+    exit 1
+fi
+
+if ! cmp -s "$APP_DIR/public/build/manifest.json" "$PUBLIC_DIR/build/manifest.json"; then
+    echo "Laravel and public_html contain different Vite manifests." >&2
+    exit 1
 fi
 
 cd "$APP_DIR"

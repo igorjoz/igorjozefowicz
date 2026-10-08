@@ -1,0 +1,113 @@
+{
+  "ui": {
+    "nav": [
+      "Start",
+      "Oferta",
+      "Realizacje",
+      "O mnie",
+      "Publikacje",
+      "Kontakt"
+    ],
+    "hero": "Dedykowane aplikacje i integracje AI dla Twojej firmy",
+    "intro": "Pomagam firmom usprawniać procesy dzięki aplikacjom webowym i AI korzystającemu z ich danych. Łączę doświadczenie w Laravelu i React z uczeniem maszynowym oraz umiejętnością jasnego wyjaśniania technologii.",
+    "cta": "Porozmawiajmy o Twoim projekcie",
+    "work": "Zobacz realizacje",
+    "services": "Oferta",
+    "projects": "Wybrane realizacje",
+    "bio": "O mnie",
+    "process": "Jak możemy współpracować",
+    "articles": "Publikacje",
+    "contact": "Kontakt",
+    "more": "Czytaj dalej",
+    "portfolio": "Dodatkowe portfolio",
+    "contactText": "Napisz na igor@jozefowicz.pl. Opisz problem, obecne narzędzia, oczekiwany rezultat i termin. Zakres, wycenę oraz warunki utrzymania ustalamy indywidualnie.",
+    "bioText": "Programuję od 2018 roku. Tworzyłem aplikacje webowe w PHP i Laravelu, rozwijając także rozwiązania w React oraz projekty uczenia maszynowego. Doświadczenie obejmuje pracę przy realizacjach Matysart i nauczanie programowania w Gigantach Programowania. Łączę praktykę tworzenia oprogramowania z przekazywaniem wiedzy o AI, Pythonie i nowych technologiach.",
+    "steps": [
+      "Rozmowa o potrzebach — ustalamy problem i oczekiwany rezultat.",
+      "Określenie zakresu — wybieramy funkcje i sposób oceny rozwiązania.",
+      "Prototyp — sprawdzamy kluczowe założenia na małym przykładzie.",
+      "Wdrożenie — integrujemy rozwiązanie i przekazujemy je do użytkowania."
+    ],
+    "labels": [
+      "Problem",
+      "Kontekst",
+      "Mój wkład",
+      "Rozwiązanie",
+      "Rezultat",
+      "Technologie",
+      "Materiały"
+    ]
+  },
+  "services": [
+    {
+      "slug": "custom-applications",
+      "title": "Dedykowane aplikacje",
+      "intro": "Gdy arkusze, e-maile i rozproszone narzędzia utrudniają codzienną pracę, aplikacja może uporządkować proces i dostęp do informacji.",
+      "items": [
+        "Narzędzia wewnętrzne do obsługi danych i procesów.",
+        "Portale klienta z dostępem do informacji i obsługi spraw.",
+        "Integracje istniejących systemów, które ograniczają ręczne przepisywanie danych.",
+        "Zakres projektu może obejmować analizę potrzeb, aplikację webową, integracje, testy i wdrożenie. Najpierw sprawdzamy, czy istniejące narzędzie nie wystarczy."
+      ]
+    },
+    {
+      "slug": "ai-integrations",
+      "title": "Integracje AI",
+      "intro": "AI może wspierać pracowników w wyszukiwaniu informacji i obsłudze powtarzalnych zadań, jeśli ma dostęp do odpowiednich danych i podlega ocenie.",
+      "items": [
+        "Asystenci korzystający z dokumentów i wiedzy firmy.",
+        "Wyszukiwanie informacji z odnośnikami do materiałów źródłowych.",
+        "Wsparcie klasyfikacji i opracowywania powtarzalnych treści z kontrolą człowieka.",
+        "RAG oznacza wyszukanie odpowiednich fragmentów danych firmy i przekazanie ich modelowi jako kontekstu odpowiedzi. Nie gwarantuje poprawności: sprawdzamy źródła, uprawnienia i zachowanie przy braku informacji.",
+        "Zakres projektu może obejmować przygotowanie danych, prototyp, integrację z aplikacją i ocenę jakości. Koszty modeli i utrzymania omawiamy osobno."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "vento",
+      "title": "Vento",
+      "paragraphs": [
+        "Obsługa internetowej oferty i sprzedaży rozwiązań grzewczych oraz wentylacyjnych.",
+        "Aplikacja biznesowa i sklep internetowy dla firmy z branży ogrzewania i wentylacji.",
+        "Praca programistyczna nad aplikacją webową i sklepem internetowym.",
+        "Aplikacja Laravel z bazą danych i interfejsem rozwijanym w React oraz integracjami płatności i wyszukiwania.",
+        "Dostarczone funkcje obejmują prezentację oferty, obsługę sklepu oraz integracje płatności i wyszukiwania."
+      ],
+      "technologies": "Laravel, MySQL, React, Sass, Przelewy24, Algolia",
+      "url": "https://www.e-kominki.com/",
+      "image": "/storage/projects/vento-logo.svg",
+      "imageAlt": "Vento"
+    },
+    {
+      "slug": "forcen",
+      "title": "Forcen",
+      "paragraphs": [
+        "Udostępnianie informacji o usługach firmy i wsparcie odpowiedzi na pytania.",
+        "Realizacja w ramach pracy w Matysart.",
+        "Rozwój strony oraz integracja chatbota z API modelu językowego i kontekstem danych firmy.",
+        "Integracja typu RAG: wyszukiwanie materiałów firmy i przekazywanie ich jako kontekstu odpowiedzi.",
+        "Zakres realizacji obejmował integrację modelu językowego z danymi firmy w aplikacji webowej."
+      ],
+      "technologies": "Laravel, React, Tailwind, LLM API, RAG",
+      "url": "https://forcen.pl/",
+      "image": "/storage/projects/forcen-logo.svg",
+      "imageAlt": "Forcen"
+    },
+    {
+      "slug": "larynxai",
+      "title": "LarynxAI",
+      "paragraphs": [
+        "Praca nad klasyfikacją obrazów w projekcie dotyczącym patologii krtani.",
+        "Zespołowy projekt uczenia maszynowego dotyczący obrazów krtani.",
+        "Mój zakres koncentrował się na klasyfikatorze; zarządzanie danymi i oznaczanie zdjęć są częścią szerszego systemu zespołu.",
+        "Praca z obrazami, modelami głębokiego uczenia i narzędziami do oceny klasyfikacji.",
+        "Prace nad klasyfikatorem obrazów jako elementem szerszego systemu zespołu."
+      ],
+      "technologies": "Python, TensorFlow, Keras, PyTorch, NumPy, scikit-learn, FastAPI",
+      "url": "https://github.com/LarynxAI",
+      "image": "/storage/projects/larynxai.jpg",
+      "imageAlt": "Projekt LarynxAI"
+    }
+  ]
+}

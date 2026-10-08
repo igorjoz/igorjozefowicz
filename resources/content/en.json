@@ -1,0 +1,113 @@
+{
+  "ui": {
+    "nav": [
+      "Home",
+      "Services",
+      "Projects",
+      "About",
+      "Articles",
+      "Contact"
+    ],
+    "hero": "Custom applications and AI integrations for your business",
+    "intro": "I help businesses improve their processes with web applications and AI grounded in their own data. I combine Laravel and React experience with machine learning and clear communication.",
+    "cta": "Let’s discuss your project",
+    "work": "Explore projects",
+    "services": "Services",
+    "projects": "Selected projects",
+    "bio": "About me",
+    "process": "How we can work together",
+    "articles": "Articles",
+    "contact": "Contact",
+    "more": "Read more",
+    "portfolio": "More projects",
+    "contactText": "Email igor@jozefowicz.pl with the problem, your current tools, the result you need and your timeline. Scope, pricing and ongoing maintenance are agreed individually.",
+    "bioText": "I have been programming since 2018. My experience includes PHP and Laravel web applications, React development and machine learning projects. I have worked on projects at Matysart and taught programming at Coding Giants. Teaching AI, Python and other technologies helps me explain technical choices clearly.",
+    "steps": [
+      "Discovery — understand the problem and desired outcome.",
+      "Scope — select features and define how to evaluate the solution.",
+      "Prototype — test key assumptions with a small working example.",
+      "Delivery — integrate the solution and hand it over to users."
+    ],
+    "labels": [
+      "Problem",
+      "Context",
+      "My contribution",
+      "Solution",
+      "Outcome",
+      "Technologies",
+      "Resources"
+    ]
+  },
+  "services": [
+    {
+      "slug": "custom-applications",
+      "title": "Custom applications",
+      "intro": "When spreadsheets, email and disconnected tools get in the way, a dedicated application can bring processes and information together.",
+      "items": [
+        "Internal tools for managing data and workflows.",
+        "Customer portals for information access and service requests.",
+        "Integrations that reduce manual transfer of data between existing systems.",
+        "A project can include discovery, web development, integrations, testing and delivery. We first check whether an existing tool would meet your needs."
+      ]
+    },
+    {
+      "slug": "ai-integrations",
+      "title": "AI integrations",
+      "intro": "AI can help employees find information and handle repetitive tasks when it has suitable data and its output is evaluated.",
+      "items": [
+        "Assistants grounded in company documents and knowledge.",
+        "Information retrieval with references to source material.",
+        "Support for classification and repetitive content tasks with human review.",
+        "RAG retrieves relevant company information and gives it to a model as context. It does not guarantee accuracy: source references, access permissions and missing-information handling still need evaluation.",
+        "A project can include data preparation, a prototype, application integration and quality evaluation. Model usage and maintenance costs are discussed separately."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "slug": "vento",
+      "title": "Vento",
+      "paragraphs": [
+        "Support an online catalogue and sales of heating and ventilation solutions.",
+        "A business application and online shop for a heating and ventilation company.",
+        "Programming work on the web application and online shop.",
+        "A Laravel application with a database, React interface development, payment and search integrations.",
+        "Delivered capabilities include product presentation, shop functionality, payment and search integrations."
+      ],
+      "technologies": "Laravel, MySQL, React, Sass, Przelewy24, Algolia",
+      "url": "https://www.e-kominki.com/",
+      "image": "/storage/projects/vento-logo.svg",
+      "imageAlt": "Vento"
+    },
+    {
+      "slug": "forcen",
+      "title": "Forcen",
+      "paragraphs": [
+        "Present company services and support answers to questions.",
+        "A project undertaken at Matysart.",
+        "Website development and chatbot integration using a language model API and company-data context.",
+        "A RAG integration retrieves company material and provides it as context for responses.",
+        "The work covered integrating a language model with company data within a web application."
+      ],
+      "technologies": "Laravel, React, Tailwind, LLM API, RAG",
+      "url": "https://forcen.pl/",
+      "image": "/storage/projects/forcen-logo.svg",
+      "imageAlt": "Forcen"
+    },
+    {
+      "slug": "larynxai",
+      "title": "LarynxAI",
+      "paragraphs": [
+        "Explore image classification in a project concerning laryngeal pathology.",
+        "A team machine learning project concerning laryngeal images.",
+        "My contribution focused on the classifier; dataset management and image tagging belong to the wider team system.",
+        "Work with images, deep learning models and classification evaluation tools.",
+        "Work on an image classifier as a component of the wider team system."
+      ],
+      "technologies": "Python, TensorFlow, Keras, PyTorch, NumPy, scikit-learn, FastAPI",
+      "url": "https://github.com/LarynxAI",
+      "image": "/storage/projects/larynxai.jpg",
+      "imageAlt": "LarynxAI project"
+    }
+  ]
+}

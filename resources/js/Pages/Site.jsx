@@ -27,7 +27,7 @@ export default function Site({ locale, section, title, description, ui, sections
             <meta property="og:locale" content={locale === 'pl' ? 'pl_PL' : 'en_GB'} head-key="og-locale" />
         </Head>
         <a className="skip-link" href="#main">{locale === 'pl' ? 'Przejdź do treści' : 'Skip to content'}</a>
-        <header className="site-header"><a className="site-brand" href={`/${locale}`}>Igor Józefowicz<span>Software Engineer · Web & AI</span></a>
+        <header className="site-header"><a className="site-brand" href={`/${locale}`}><img className="site-brand-logo" src="/images/logo-igorjoz.svg" alt="" width="50" height="50" /><div>Igor Józefowicz<span>Software Engineer · Web & AI</span></div></a>
             <nav aria-label={locale === 'pl' ? 'Nawigacja główna' : 'Main navigation'}>{nav.map((path, i) => <a key={path} href={`/${locale}${path ? '/'+path : ''}`} aria-current={section === path ? 'page' : undefined}>{ui.nav[i]}</a>)}</nav>
             <div className="language-switch" aria-label={locale === 'pl' ? 'Wybierz język' : 'Choose language'}>{Object.entries(alternates).map(([lang, href]) => <a key={lang} href={href} hrefLang={lang} lang={lang} aria-current={locale === lang ? 'true' : undefined}>{lang.toUpperCase()}</a>)}</div>
         </header>

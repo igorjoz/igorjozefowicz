@@ -161,6 +161,7 @@ export default function Index() {
 
             {/* Hero Section */}
             <section className="min-h-screen flex flex-col items-center justify-center text-white px-4" id="hero-section">
+                <img src="/images/logo-igorjoz.svg" alt="" width="128" height="128" className="w-24 h-24 sm:w-32 sm:h-32 mb-12" />
                 <h1 className="hero-name text-6xl xs:text-7xl sm:text-8xl md:text-9xl font-bold mb-36 text-center" style={{ textShadow: '4px 4px 0px rgba(255, 192, 203, 0.8)' }}>
                     Igor Józefowicz
                 </h1>

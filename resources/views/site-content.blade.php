@@ -2,7 +2,7 @@
 <div class="site-shell">
     <a class="skip-link" href="#main">{{ $props['locale'] === 'pl' ? 'Przejdź do treści' : 'Skip to content' }}</a>
     <header class="site-header">
-        <a class="site-brand" href="/{{ $props['locale'] }}">Igor Józefowicz<span>Software Engineer · Web & AI</span></a>
+        <a class="site-brand" href="/{{ $props['locale'] }}"><img class="site-brand-logo" src="{{ asset('images/logo-igorjoz.svg') }}" alt="" width="50" height="50"><div>Igor Józefowicz<span>Software Engineer · Web & AI</span></div></a>
         <nav aria-label="{{ $props['locale'] === 'pl' ? 'Nawigacja główna' : 'Main navigation' }}">
             @foreach(['', 'services', 'projects', 'about', 'articles', 'contact'] as $index => $path)
                 <a href="/{{ $props['locale'] }}{{ $path ? '/'.$path : '' }}" @if($props['section'] === $path) aria-current="page" @endif>{{ $props['ui']['nav'][$index] }}</a>

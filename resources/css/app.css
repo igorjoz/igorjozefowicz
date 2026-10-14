@@ -347,7 +347,8 @@ a:hover { color: var(--color-primary); text-shadow: 0 0 20px var(--primary-a35);
 /* Bilingual business portfolio */
 .site-shell { max-width: 1180px; margin: auto; padding: 0 28px; }
 .site-header { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding: 32px 0; border-bottom: 1px solid #ffffff20; }
-.site-brand { font-size: 2rem; font-weight: 700; margin-right: auto; }
+.site-brand { display: flex; align-items: center; gap: 16px; font-size: 2rem; font-weight: 700; margin-right: auto; }
+.site-brand-logo { width: 50px; height: 50px; flex-shrink: 0; object-fit: contain; }
 .site-brand span { display: block; font-size: 1.2rem; color: var(--color-muted); font-weight: 400; margin-top: 6px; }
 .site-header nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 1.4rem; }
 .site-shell a { text-decoration: none; }

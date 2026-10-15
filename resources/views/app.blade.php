@@ -18,14 +18,14 @@
 
     @if(isset($site))
         @php($meta = $page['props'])
-        <title inertia>{{ $meta['title'] }} | Igor Józefowicz</title>
+        <title inertia>{{ $meta['metaTitle'] }} | Igor Józefowicz</title>
         <meta name="description" content="{{ $meta['description'] }}" inertia="description">
         <link rel="canonical" href="{{ $meta['canonical'] }}" inertia="canonical">
         @foreach($meta['alternates'] as $lang => $href)
             <link rel="alternate" hreflang="{{ $lang }}" href="{{ $href }}" inertia="alternate-{{ $lang }}">
         @endforeach
         <link rel="alternate" hreflang="x-default" href="{{ $meta['alternates']['pl'] }}" inertia="alternate-default">
-        <meta property="og:title" content="{{ $meta['title'] }} | Igor Józefowicz" inertia="og-title">
+        <meta property="og:title" content="{{ $meta['metaTitle'] }} | Igor Józefowicz" inertia="og-title">
         <meta property="og:description" content="{{ $meta['description'] }}" inertia="og-description">
         <meta property="og:url" content="{{ $meta['canonical'] }}" inertia="og-url">
         <meta property="og:type" content="{{ $meta['articleHtml'] ? 'article' : 'website' }}" inertia="og-type">
@@ -33,6 +33,9 @@
         <meta property="og:image" content="{{ url('/storage/home/Igor.jpg') }}" inertia="og-image">
         <meta property="og:image:alt" content="Igor Józefowicz" inertia="og-image-alt">
         <meta name="twitter:card" content="summary" inertia="twitter-card">
+        @if($meta['presentation']['article'])
+        <script type="application/ld+json" inertia="article-schema">{!! json_encode($meta['presentation']['article']['schema'], JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}</script>
+        @endif
     @else
         <title inertia>{{ config('app.name', 'Igor Józefowicz') }}</title>
         <meta name="description" content="Igor Józefowicz — Software Engineer">

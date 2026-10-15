@@ -36,8 +36,33 @@ files with a JSON metadata line followed by `---`. Both language versions must
 have `status: published` to become public. See [the content roadmap](docs/content-roadmap.md)
 for the editorial schedule, fact verification notes and LinkedIn drafts.
 
+The offer addresses growing SMEs, especially B2B trade, distribution and services.
+Home content leads with audience and workflow problems, then three service areas,
+Vento and Forcen, collaboration, process, biography, a compact LarynxAI introduction,
+articles and contact. All three projects remain in the project catalogue.
+The two existing service URLs are preserved: applications and system integrations
+share `custom-applications` (automation links to `#automation-details`), while
+practical AI uses `ai-integrations`. Detail pages have distinct content and no
+"read more" links back to themselves.
+
+Locale data groups audience/problem/collaboration cards under `business`, service
+entry points under `offerings`, detailed service sections under `services[].details`
+and page SEO overrides under `meta`. `metaTitle` in the Inertia props allows a
+search title distinct from the visible H1. Both React and Blade consume the same
+controller-built sections, including cards and contact prompts. See
+[the positioning notes](docs/sme-positioning.md) for editorial decisions.
+
 The Laravel view renders readable initial HTML and metadata; React mounts the
 same page data once JavaScript loads. No separate Node SSR service is required.
+
+Published article metadata includes a manually maintained `publishedAt`
+(`YYYY-MM-DD`) and optional `updatedAt` (the same date or later). Drafts do not
+require dates. `ArticleMetadata` validates and localises dates centrally; lists
+sort by publication date descending, then slug ascending. Dates appear on home,
+the article index and detail pages. `presentation.article` carries detail metadata
+and the `BlogPosting` schema; `articleHtml` remains unchanged. Both renderers use
+the same date values, and Inertia replaces or removes the article schema on visits.
+See the content roadmap for publication and update-date rules.
 
 Verification in the local Docker environment:
 

@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 
 const widths = [360, 390, 768, 1024, 1366, 1920];
-const paths = ['', '/projects', '/projects/forcen', '/services', '/about', '/articles', '/articles/custom-application', '/contact'];
+const paths = ['', '/projects', '/projects/forcen', '/services', '/services/custom-applications', '/services/ai-integrations', '/about', '/articles', '/articles/custom-application', '/articles/business-system-integrations', '/contact'];
 
 async function checkText(page) {
     return page.locator('.studio-site').evaluate(root => {
         const problems = [];
-        const descriptions = '.about-copy > p, .hero-intro, .project-copy > p:not(.site-eyebrow), .project-contribution p, .studio-section > p:not(.site-eyebrow), .studio-section li, .contact-note, .site-article p, .site-article li';
+        const descriptions = '.about-copy > p, .hero-intro, .project-copy > p:not(.site-eyebrow), .project-contribution p, .studio-section > p:not(.site-eyebrow), .studio-section li, .contact-note, .business-card p, .business-card dd, .contact-prompts li, .site-article p, .site-article li';
         for (const element of root.querySelectorAll('*')) {
             const hasText = [...element.childNodes].some(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
             if (!hasText || !element.getClientRects().length) continue;
@@ -57,7 +57,7 @@ for (const locale of ['pl', 'en']) {
                     await page.evaluate(() => window.scrollTo({ top: 400, behavior: 'instant' }));
                     expect((await page.locator('.site-header').boundingBox()).y).toBeLessThan(0);
                     await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-                    await expect(page.locator('.studio-hero h1')).toHaveText(locale === 'pl' ? 'Dedykowane aplikacje i integracje AI dla Twojej firmy' : 'Custom applications and AI integrations for your business');
+                    await expect(page.locator('.studio-hero h1')).toHaveText(locale === 'pl' ? 'Aplikacje i automatyzacje dla rozwijających się firm' : 'Business applications and automation for growing companies');
                     await expect(page.locator('.studio-hero .hero-mark, .studio-hero img, .hero-baseline')).toHaveCount(0);
                     await expect(page.locator('.hero-copy .site-button')).toHaveAttribute('href', '#contact');
                     await expect(page.locator('.hero-copy .text-link')).toHaveAttribute('href', `/${locale}/projects`);
@@ -88,7 +88,7 @@ test('server HTML retains the portrait and mobile navigation without JavaScript'
     await page.locator('.server-mobile-menu summary').click();
     await expect(page.locator('.server-mobile-menu nav')).toBeVisible();
     expect(await checkText(page)).toEqual([]);
-    await expect(page.locator('.project-scene')).toHaveCount(3);
+    await expect(page.locator('.project-scene')).toHaveCount(2);
     await page.locator('.server-mobile-menu a[href="/pl/projects"]').click();
     await expect(page).toHaveURL(/\/pl\/projects$/);
     await expect(page.locator('h1')).toHaveText('Realizacje');

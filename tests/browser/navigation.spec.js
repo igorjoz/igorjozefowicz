@@ -44,7 +44,7 @@ test('portfolio links update React without replacing the document or animated sh
     await visit('.language-switch a[lang="en"]', '/en/services/custom-applications');
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
     await expect(page.locator('#studio-navigation a[href="/en/services"]')).toHaveAttribute('aria-current', 'page');
-    await expect(page).toHaveTitle('Custom applications | Igor Józefowicz');
+    await expect(page).toHaveTitle('Business applications and system integrations | Igor Józefowicz');
     await expect(page.locator('head link[rel="canonical"]')).toHaveCount(1);
     await expect(page.locator('head link[rel="canonical"]')).toHaveAttribute('href', /\/en\/services\/custom-applications$/);
     await expect(page.locator('head link[hreflang="pl"]')).toHaveAttribute('href', /\/pl\/services\/custom-applications$/);

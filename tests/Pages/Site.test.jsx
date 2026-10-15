@@ -64,4 +64,15 @@ describe('Bilingual site', () => {
         expect(portrait.closest('section')).toHaveAttribute('id', 'about');
         expect(portrait).toHaveAttribute('loading', 'lazy');
     });
+    it.each(['pl', 'en'])('presents business needs, service choices and contact prompts in %s', locale => {
+        const content = locale === 'pl' ? pl : en;
+        const data = props(locale);
+        const cards = Object.entries(content.business).map(([id, item]) => ({ id, heading: item.heading, kind: 'cards', cards: item.cards, paragraphs: [], items: [], links: [] }));
+        render(<RenderedSite {...data} section="" sections={[...cards, { ...data.sections[0], items: content.ui.contactPrompts }]} />);
+        expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(content.ui.hero);
+        expect(screen.getByRole('heading', { name: content.business.audience.heading })).toBeVisible();
+        expect(screen.getByText(content.business.problems.cards[0].solution)).toBeVisible();
+        expect(screen.getByRole('heading', { name: content.ui.contactPromptsTitle })).toBeVisible();
+        expect(screen.getByText(content.ui.contactPrompts[0])).toBeVisible();
+    });
 });

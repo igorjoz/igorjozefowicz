@@ -20,25 +20,50 @@ class IndexPageTest extends TestCase
         foreach (['pl', 'en'] as $locale) {
             $response = $this->get('/'.$locale);
             $response->assertOk()->assertSee('<html lang="'.$locale.'">', false)
-                ->assertSee('<h1>'.($locale === 'pl' ? 'Dedykowane aplikacje' : 'Custom applications'), false)->assertSee('rel="canonical"', false)
+                ->assertSee('<h1>'.($locale === 'pl' ? 'Aplikacje i automatyzacje' : 'Business applications and automation'), false)->assertSee('rel="canonical"', false)
                 ->assertSee('hreflang="pl"', false)->assertSee('hreflang="en"', false)
                 ->assertSee('mailto:igor@jozefowicz.pl', false);
             $response->assertInertia(fn (Assert $page) => $page->component('Site')->where('locale', $locale));
         }
     }
 
-    public function test_home_orders_work_before_about_and_services(): void
+    public function test_home_explains_business_needs_before_showing_relevant_work(): void
     {
         $this->withoutVite();
         foreach (['pl', 'en'] as $locale) {
             $this->get('/'.$locale)->assertOk()
-                ->assertSeeInOrder(['id="vento"', 'id="forcen"', 'id="larynxai"', 'id="about"', 'id="custom-applications"', 'id="articles"', 'id="contact"'], false)
+                ->assertSeeInOrder(['id="audience"', 'id="problems"', 'id="offerings"', 'id="vento"', 'id="forcen"', 'id="collaboration"', 'id="process"', 'id="about"', 'id="larynxai"', 'id="articles"', 'id="contact"'], false)
                 ->assertDontSee('class="hero-mark"', false)
                 ->assertSee('/images/igor-portrait-640.webp', false)
                 ->assertDontSee('/images/sculpture.svg', false)
-                ->assertInertia(fn (Assert $page) => $page->where('presentation.view', 'home')->where('sections.0.kind', 'project')->where('sections.0.project.slug', 'vento'));
+                ->assertInertia(fn (Assert $page) => $page->where('presentation.view', 'home')->where('sections.0.kind', 'cards')->where('sections.0.id', 'audience'));
             $this->get('/'.$locale.'/projects/forcen')->assertOk()
                 ->assertInertia(fn (Assert $page) => $page->where('presentation.view', 'project-detail')->where('presentation.project.slug', 'forcen'));
+        }
+    }
+
+    public function test_services_have_three_entry_points_and_substantial_details_without_self_links(): void
+    {
+        $this->withoutVite();
+        foreach (['pl', 'en'] as $locale) {
+            $this->get("/$locale/services")->assertOk()
+                ->assertInertia(fn (Assert $page) => $page
+                    ->has('sections.0.cards', 3)
+                    ->where('sections.0.cards.1.href', "/$locale/services/custom-applications#automation-details"));
+            foreach (['custom-applications', 'ai-integrations'] as $slug) {
+                $this->get("/$locale/services/$slug")->assertOk()
+                    ->assertDontSee('href="/'.$locale.'/services/'.$slug.'"', false)
+                    ->assertSee('id="first-step"', false)
+                    ->assertSee('id="process"', false)
+                    ->assertSee('id="related-project"', false)
+                    ->assertInertia(fn (Assert $page) => $page
+                        ->has('sections', 9)
+                        ->where('sections.8.items', json_decode(file_get_contents(resource_path("content/$locale.json")), true)['ui']['contactPrompts']));
+            }
+            $this->get("/$locale/services/custom-applications")->assertSee('id="automation-details"', false);
+            $this->get("/$locale/services/ai-integrations")->assertSee('id="data-access"', false)->assertSee('id="quality"', false);
+            $this->get("/$locale/projects/forcen")->assertSee('Matysart');
+            $this->get("/$locale/projects/larynxai")->assertSee($locale === 'pl' ? 'klasyfikatorem' : 'classifier');
         }
     }
 
@@ -46,7 +71,7 @@ class IndexPageTest extends TestCase
     {
         $this->withoutVite();
         foreach (['pl', 'en'] as $locale) {
-            foreach (['services', 'services/custom-applications', 'services/ai-integrations', 'projects', 'projects/vento', 'projects/forcen', 'projects/larynxai', 'about', 'contact', 'articles', 'articles/custom-application'] as $path) {
+            foreach (['services', 'services/custom-applications', 'services/ai-integrations', 'projects', 'projects/vento', 'projects/forcen', 'projects/larynxai', 'about', 'contact', 'articles', 'articles/custom-application', 'articles/business-system-integrations'] as $path) {
                 $this->get("/$locale/$path")->assertOk()->assertSee("/$locale/services");
             }
         }

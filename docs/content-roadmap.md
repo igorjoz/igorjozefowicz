@@ -17,10 +17,32 @@ Stan researchu: 8 października 2026. Źródła: https://github.com/igorjoz, htt
 Treści stałe: `resources/content/pl.json` i `en.json`. Artykuły: `resources/content/articles/{pl,en}/*.md`. Pierwsza linia to obiekt JSON z `slug`, `title`, `status`, po nim separator `---` i Markdown. Do publicznej listy, tras i sitemap trafiają wyłącznie wpisy z `status: published` w obu wersjach językowych. Slug jest identyczny w obu językach.
 
 - Miesiąc 1 od uruchomienia: `custom-application` — przygotowany jako opublikowany.
+- `business-system-integrations` — nowy artykuł PL/EN przygotowany jako opublikowany, z jawną datą `2026-10-15`. Przed późniejszym wdrożeniem potwierdzić lub zmienić tę datę na rzeczywisty dzień udostępnienia. Artykuł wykorzystuje przykład hipotetyczny; źródła techniczne: dokumentacja Stripe Webhooks i Microsoft Retry pattern.
 - Miesiąc 2: `company-ai-assistant` — szkic. Po redakcji zmienić status w obu językach razem.
 - Miesiąc 3: `first-ai-pilot` — szkic. Po redakcji zmienić status w obu językach razem.
 
 Nie ustawiamy automatycznych dat publikacji: harmonogram liczymy od rzeczywistego uruchomienia. Wszystkie teksty wymagają zwykłego przeglądu autora przed wdrożeniem produkcyjnym.
+
+### Daty publikacji i aktualizacji
+
+Metadane opublikowanego tekstu wymagają `publishedAt` w formacie `YYYY-MM-DD`.
+Opcjonalne `updatedAt` oznacza faktyczne udostępnienie zmienionej treści i nie może
+poprzedzać publikacji; aktualizacja tego samego dnia jest dozwolona i widoczna.
+Autor potwierdził pierwszą publikację `custom-application` na `2026-10-08` w PL/EN.
+Lokalne korekty tego artykułu nie otrzymały jeszcze daty aktualizacji. Wpisać ją
+przy udostępnieniu poprawionej treści, nie przy samym zapisaniu pliku.
+
+Daty wprowadzamy ręcznie, w obu wersjach językowych zgodnie z faktycznym
+udostępnieniem. Nowy artykuł publikujemy w PL/EN równocześnie. Nie wyprowadzamy
+dat z Git, czasu pliku ani buildu i nie zmieniamy ich przy zmianach oprawy strony.
+Brak daty aktualizacji oznacza brak etykiety oraz brak `dateModified` w JSON-LD.
+Wcześniejsza data publikacji pozostaje niezmienna po aktualizacji.
+
+Laravel waliduje daty i przygotowuje zapis lokalny dla React i Blade. Listy
+sortujemy od najnowszej daty publikacji, z rosnącym slugiem przy tej samej dacie.
+Data aktualizacji nie zmienia kolejności. Listy, podstrona i dane `BlogPosting`
+korzystają z tych samych wartości. Artykuły bez opublikowanego tłumaczenia nadal
+nie trafiają do list, routingu ani sitemap.
 
 ## Posty LinkedIn do ręcznego wykorzystania
 

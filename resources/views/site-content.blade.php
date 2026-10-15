@@ -5,6 +5,9 @@
     $home = $props['section'] === '';
     $projects = array_values(array_filter($props['sections'], fn ($s) => $s['kind'] === 'project'));
     $remaining = array_values(array_filter($props['sections'], fn ($s) => $s['kind'] !== 'project'));
+    $leadIds = $home ? ['audience', 'problems', 'offerings'] : [];
+    $lead = array_filter($remaining, fn ($s) => in_array($s['id'], $leadIds));
+    $remaining = array_filter($remaining, fn ($s) => ! in_array($s['id'], $leadIds));
     $project = $props['presentation']['project'];
 @endphp
 <div class="studio-site {{ $props['section'] === 'about' ? 'about-page' : '' }}">
@@ -33,11 +36,13 @@
         </section>
         @else
         <section class="page-hero {{ $project ? 'project-detail-hero' : '' }}"><div><p class="site-eyebrow">Igor Józefowicz / {{ $project ? $studio['project'] : 'Web & AI' }}</p><h1>{{ $props['title'] }}</h1>
+            @if($props['presentation']['article'])@include('article-dates', ['articleDates' => $props['presentation']['article']])@endif
             @if($project)<p>{{ $project['paragraphs'][0] }}</p><a class="text-link" href="/{{ $props['locale'] }}/projects">← {{ $studio['backProjects'] }}</a>@endif</div>
             @if($project)<div class="project-detail-image project-{{ $project['slug'] }}"><img src="{{ $project['image'] }}" alt="{{ $project['imageAlt'] }}" width="640" height="360"></div>@endif
         </section>
         @endif
         @if($props['articleHtml'])<article class="site-article">{!! $props['articleHtml'] !!}</article>@endif
+        @if(count($lead))<div class="studio-sections">@foreach($lead as $s)@include('site-section')@endforeach</div>@endif
         @if(count($projects))
         <div class="selected-work"><div class="section-heading"><div><p class="site-eyebrow">01 / {{ $studio['selected'] }}</p><h2>{{ $studio['selected'] }}</h2><p>{{ $studio['selectedNote'] }}</p></div>@if($home)<a class="text-link" href="/{{ $props['locale'] }}/projects">{{ $studio['allProjects'] }} <span class="link-arrow" aria-hidden="true">↗</span></a>@endif</div>
             @foreach($projects as $index => $s)

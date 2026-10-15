@@ -8,9 +8,9 @@
       "Articles",
       "Contact"
     ],
-    "hero": "Custom applications and AI integrations for your business",
-    "intro": "I help businesses improve their processes with web applications and AI grounded in their own data. I combine Laravel and React experience with machine learning and clear communication.",
-    "cta": "Let’s discuss your project",
+    "hero": "Business applications and automation for growing companies",
+    "intro": "I help small and medium-sized businesses simplify everyday work, connect their existing systems and reduce manual data entry. I build business applications, integrations and practical AI tools around the way your company works.",
+    "cta": "Let’s talk about your business",
     "work": "Explore projects",
     "services": "Services",
     "projects": "Selected projects",
@@ -20,20 +20,20 @@
     "contact": "Contact",
     "more": "Read more",
     "portfolio": "More projects",
-    "contactText": "Email igor@jozefowicz.pl with the problem, your current tools, the result you need and your timeline. Scope, pricing and ongoing maintenance are agreed individually.",
+    "contactText": "Tell me how your company works today and what you would like to improve. You do not need a technical specification. We can work out whether to connect existing tools, automate a task or build an application. Scope, pricing and maintenance arrangements are agreed before work starts.",
     "bioText": "I have been programming since 2018. My experience includes PHP and Laravel web applications, React development and machine learning projects. I have worked on projects at Matysart and taught programming at Coding Giants. Teaching AI, Python and other technologies helps me explain technical choices clearly.",
     "steps": [
-      "Discovery — understand the problem and desired outcome.",
-      "Scope — select features and define how to evaluate the solution.",
-      "Prototype — test key assumptions with a small working example.",
-      "Delivery — integrate the solution and hand it over to users."
+      "Understand your workflow — you describe the process, the difficulties and the tools you use.",
+      "Choose an approach — we consider existing tools and agree scope, pricing and how to evaluate the result.",
+      "First version — I build a selected part of the application or a prototype, and we gather feedback from users.",
+      "Launch and next steps — we put the solution into use, cover day-to-day operation and agree maintenance arrangements."
     ],
     "labels": [
-      "Problem",
-      "Context",
+      "Need",
+      "Business context",
       "My contribution",
       "Solution",
-      "Outcome",
+      "Delivered functionality",
       "Technologies",
       "Resources"
     ],
@@ -41,7 +41,7 @@
       "tagline": "Building applications. Connecting code with intelligence.",
       "discipline": "Software Engineer / Web & AI",
       "selected": "Selected work",
-      "selectedNote": "From business applications to machine learning. Real problems, considered solutions.",
+      "selectedNote": "Selected projects in business applications, system integrations and AI.",
       "allProjects": "All projects",
       "contribution": "My contribution",
       "project": "Project",
@@ -52,9 +52,9 @@
         "Machine learning",
         "Technology education"
       ],
-      "servicesNote": "From an idea to a working solution.",
+      "servicesNote": "Let’s start with what you want to improve.",
       "articlesNote": "Thoughts, experience and the practice of building software.",
-      "contactTitle": "Let’s make\nsomething matter.",
+      "contactTitle": "What takes up too much\nof your team’s time?",
       "copy": "Copy email",
       "copied": "Address copied",
       "copyFailed": "Could not copy. Select the address above.",
@@ -70,31 +70,122 @@
       "index": "Project index",
       "processNote": "A clear goal. A considered process.",
       "scroll": "Scroll to explore my work",
-      "portraitAlt": "Artistic portrait of Igor Józefowicz"
-    }
+      "portraitAlt": "Artistic portrait of Igor Józefowicz",
+      "published": "Published",
+      "updated": "Updated"
+    },
+    "contactPrompts": [
+      "What does your company do?",
+      "What is getting in the way?",
+      "Which tools do you use?",
+      "What would you like to improve?"
+    ],
+    "contactPromptsTitle": "A few sentences are enough to start",
+    "businessLabels": {
+      "solution": "Possible solution",
+      "benefit": "What this can improve"
+    },
+    "mlTitle": "LarynxAI — a machine learning project",
+    "mlNote": "In the LarynxAI team project, I worked on a classifier for laryngeal images, using deep learning models and tools to evaluate classification accuracy.",
+    "serviceHeading": "How I can help",
+    "mlLink": "Explore my LarynxAI contribution",
+    "serviceOverview": "Who this service is for",
+    "bioSummary": "I am an independent software engineer and have been programming since 2018. I build web applications and integrations and work on machine learning projects. My experience includes projects at Matysart and teaching programming. You work directly with me, from understanding your workflow through to delivery.",
+    "aboutLink": "More about my experience"
   },
   "services": [
     {
       "slug": "custom-applications",
-      "title": "Custom applications",
-      "intro": "When spreadsheets, email and disconnected tools get in the way, a dedicated application can bring processes and information together.",
-      "items": [
-        "Internal tools for managing data and workflows.",
-        "Customer portals for information access and service requests.",
-        "Integrations that reduce manual transfer of data between existing systems.",
-        "A project can include discovery, web development, integrations, testing and delivery. We first check whether an existing tool would meet your needs."
+      "title": "Business applications and system integrations",
+      "intro": "For B2B trading, distribution and service companies where handling orders, managing jobs or transferring data involves too much manual work. We can extend an existing application, connect your tools or build a system around the workflow.",
+      "details": [
+        {
+          "id": "business-applications",
+          "heading": "Software built around everyday work",
+          "paragraphs": [
+            "A custom system makes sense when a recurring workflow matters to the business and existing products do not handle it well enough."
+          ],
+          "items": [
+            "Internal tools for employees to manage jobs, requests and orders.",
+            "Customer and partner portals with access to their own information.",
+            "Extending existing applications instead of replacing the entire system."
+          ]
+        },
+        {
+          "id": "automation-details",
+          "heading": "Workflow automation and system integrations",
+          "paragraphs": [
+            "When your applications already do their jobs well, connecting them may be the right approach. We first identify where data comes from, where it needs to go and who is responsible for its accuracy."
+          ],
+          "items": [
+            "Data exchange through available application programming interfaces (APIs).",
+            "Automating selected sales and internal operations.",
+            "Generating reports from agreed data sources.",
+            "Error handling, operation logs and agreed access permissions."
+          ]
+        },
+        {
+          "id": "fit",
+          "heading": "When to build and when to use an existing product",
+          "paragraphs": [
+            "If an off-the-shelf product can support your workflow with configuration, there is no need to build a copy. Custom software is worth considering for specific workflows, connected data or limitations in an existing system.",
+            "Before estimating the work, we check system access, documentation, integration constraints and ongoing maintenance costs. Some tools do not expose data in a way that makes integration straightforward."
+          ],
+          "items": []
+        },
+        {
+          "id": "first-step",
+          "heading": "Where to start",
+          "paragraphs": [
+            "Choose one workflow, such as transferring orders or preparing a report. Describe how it works today and which tools you use. We can agree where to start and how to assess the results."
+          ],
+          "items": []
+        }
       ]
     },
     {
       "slug": "ai-integrations",
-      "title": "AI integrations",
-      "intro": "AI can help employees find information and handle repetitive tasks when it has suitable data and its output is evaluated.",
-      "items": [
-        "Assistants grounded in company documents and knowledge.",
-        "Information retrieval with references to source material.",
-        "Support for classification and repetitive content tasks with human review.",
-        "RAG retrieves relevant company information and gives it to a model as context. It does not guarantee accuracy: source references, access permissions and missing-information handling still need evaluation.",
-        "A project can include data preparation, a prototype, application integration and quality evaluation. Model usage and maintenance costs are discussed separately."
+      "title": "Practical AI implementations",
+      "intro": "For businesses where employees search across many documents or repeatedly process similar text. We first check whether AI is needed and whether the available data can support a useful solution.",
+      "details": [
+        {
+          "id": "ai-use-cases",
+          "heading": "Where AI can help",
+          "paragraphs": [],
+          "items": [
+            "An assistant answering questions from company documents.",
+            "Internal knowledge search with links to sources.",
+            "Classifying requests and organising text information.",
+            "Draft summaries and content for an employee to review.",
+            "Connecting a language model to an existing application."
+          ]
+        },
+        {
+          "id": "quality",
+          "heading": "Answer quality and limitations",
+          "paragraphs": [
+            "We start with representative questions or tasks and agree evaluation criteria. We test accuracy, source references and what happens when information is missing. Important decisions and content need appropriate human review.",
+            "Retrieval-augmented generation (RAG) finds relevant company material and supplies it to a model as context. This helps ground answers in documents but does not eliminate errors. A conventional search tool may be a better choice for simple retrieval."
+          ],
+          "items": []
+        },
+        {
+          "id": "data-access",
+          "heading": "Data, permissions and running costs",
+          "paragraphs": [
+            "Before a prototype, we agree which data may be processed, who may access it and whether it can be sent to an external model provider. User permissions must also apply to retrieval and generated answers.",
+            "Storage, provider terms, operation logs and error handling depend on the implementation. We discuss model usage, hosting and maintenance costs separately."
+          ],
+          "items": []
+        },
+        {
+          "id": "first-step",
+          "heading": "Start with a small prototype",
+          "paragraphs": [
+            "We choose one task and an agreed dataset. A prototype tests quality and costs before a broader integration. If it falls short of the criteria, we adjust the approach or leave AI out of that workflow."
+          ],
+          "items": []
+        }
       ]
     }
   ],
@@ -105,7 +196,7 @@
       "paragraphs": [
         "Support an online catalogue and sales of heating and ventilation solutions.",
         "A business application and online shop for a heating and ventilation company.",
-        "Programming work on the web application and online shop.",
+        "My contribution included development work on the web application and online shop, including payment and search integrations.",
         "A Laravel application with a database, React interface development, payment and search integrations.",
         "Delivered capabilities include product presentation, shop functionality, payment and search integrations."
       ],
@@ -118,10 +209,10 @@
       "slug": "forcen",
       "title": "Forcen",
       "paragraphs": [
-        "Present company services and support answers to questions.",
+        "Present company services and provide answers grounded in company material.",
         "A project undertaken at Matysart.",
         "Website development and chatbot integration using a language model API and company-data context.",
-        "A RAG integration retrieves company material and provides it as context for responses.",
+        "Retrieving relevant company material and supplying it to a language model as context for answers (RAG).",
         "The work covered integrating a language model with company data within a web application."
       ],
       "technologies": "Laravel, React, Tailwind, LLM API, RAG",
@@ -135,14 +226,114 @@
       "paragraphs": [
         "Explore image classification in a project concerning laryngeal pathology.",
         "A team machine learning project concerning laryngeal images.",
-        "My contribution focused on the classifier; dataset management and image tagging belong to the wider team system.",
+        "I worked on the laryngeal image classifier. Dataset management and image tagging are other parts of the system developed by the team.",
         "Work with images, deep learning models and classification evaluation tools.",
-        "Work on an image classifier as a component of the wider team system."
+        "Work on an image classifier as a component of the system developed by the team."
       ],
       "technologies": "Python, TensorFlow, Keras, PyTorch, NumPy, scikit-learn, FastAPI",
       "url": "https://github.com/LarynxAI",
       "image": "/storage/projects/larynxai.jpg",
       "imageAlt": "LarynxAI project"
     }
-  ]
+  ],
+  "business": {
+    "audience": {
+      "heading": "Who I work with",
+      "intro": "I primarily work with small and medium-sized B2B trading, distribution and service businesses.",
+      "cards": [
+        {
+          "heading": "Trade and distribution",
+          "text": "Order handling, partner portals and information flowing between sales and back-office tools."
+        },
+        {
+          "heading": "B2B services",
+          "text": "Jobs and service requests, employee tools, customer portals and reporting."
+        },
+        {
+          "heading": "Scattered company knowledge",
+          "text": "Documents and information spread across applications that employees need to access more easily."
+        }
+      ]
+    },
+    "problems": {
+      "heading": "Does this sound like your business?",
+      "intro": "",
+      "cards": [
+        {
+          "heading": "Your team enters the same data more than once",
+          "text": "People move information between spreadsheets, email and business tools.",
+          "solution": "Connect existing systems and automate data transfers.",
+          "benefit": "Less manual data entry and a lower risk of mistakes."
+        },
+        {
+          "heading": "Orders and customer requests are hard to track",
+          "text": "Updates on ongoing jobs get lost in email, and customers keep asking for the same information.",
+          "solution": "A shared job-management panel or customer portal.",
+          "benefit": "Clearer status updates and easier access to the information people need."
+        },
+        {
+          "heading": "Finding an answer means searching several places",
+          "text": "Instructions, decisions and documentation are scattered.",
+          "solution": "An organised knowledge base, search tool or AI assistant with source references.",
+          "benefit": "Easier information retrieval while respecting access permissions."
+        }
+      ]
+    },
+    "collaboration": {
+      "heading": "How I work with you",
+      "intro": "",
+      "cards": [
+        {
+          "heading": "Direct collaboration",
+          "text": "You work directly with me, from understanding the problem through to delivery. We agree priorities and scope together."
+        },
+        {
+          "heading": "Technology that fits the need",
+          "text": "I start by looking at your current tools. An integration or a configured off-the-shelf product may be enough."
+        },
+        {
+          "heading": "A manageable first step",
+          "text": "We can start with one workflow or a prototype. We plan further development around your business needs and feedback from users."
+        },
+        {
+          "heading": "Applications and AI together",
+          "text": "I combine application development with machine learning, proposing AI where its usefulness and quality can be evaluated."
+        }
+      ]
+    }
+  },
+  "offerings": [
+    {
+      "id": "custom-applications",
+      "slug": "custom-applications",
+      "heading": "Custom business applications",
+      "text": "Order and job management, employee tools and customer portals, when off-the-shelf software does not fit your workflow.",
+      "linkLabel": "Explore business applications"
+    },
+    {
+      "id": "automation",
+      "slug": "custom-applications",
+      "anchor": "automation-details",
+      "heading": "Workflow automation and integrations",
+      "text": "Connect sales and internal tools, transfer data and generate reports. A focused starting point for improving one repetitive process.",
+      "linkLabel": "Explore system integrations"
+    },
+    {
+      "id": "ai-integrations",
+      "slug": "ai-integrations",
+      "heading": "Practical AI implementations",
+      "text": "Search company documents, build assistants that answer questions using those documents and process text, with quality checks, access controls and model limitations in mind.",
+      "linkLabel": "Explore practical AI"
+    }
+  ],
+  "meta": {
+    "home": {
+      "title": "Business applications, automation and integrations",
+      "description": "Business applications, system integrations and practical AI for small and medium-sized companies. Work directly with independent software engineer Igor Józefowicz."
+    },
+    "services": {
+      "title": "Business applications, automation and AI — services",
+      "description": "Custom business applications, workflow automation and system integrations. Explore the services and how we can work together."
+    }
+  }
 }

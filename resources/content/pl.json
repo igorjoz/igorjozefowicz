@@ -8,9 +8,9 @@
       "Publikacje",
       "Kontakt"
     ],
-    "hero": "Dedykowane aplikacje i integracje AI dla Twojej firmy",
-    "intro": "Pomagam firmom usprawniać procesy dzięki aplikacjom webowym i AI korzystającemu z ich danych. Łączę doświadczenie w Laravelu i React z uczeniem maszynowym oraz umiejętnością jasnego wyjaśniania technologii.",
-    "cta": "Porozmawiajmy o Twoim projekcie",
+    "hero": "Aplikacje i automatyzacje dla rozwijających się firm",
+    "intro": "Pomagam małym i średnim firmom usprawniać codzienną pracę, łączyć używane systemy i ograniczać ręczne przepisywanie danych. Projektuję aplikacje biznesowe, integracje i rozwiązania AI dopasowane do konkretnego procesu.",
+    "cta": "Porozmawiajmy o Twojej firmie",
     "work": "Zobacz realizacje",
     "services": "Oferta",
     "projects": "Wybrane realizacje",
@@ -20,20 +20,20 @@
     "contact": "Kontakt",
     "more": "Czytaj dalej",
     "portfolio": "Dodatkowe portfolio",
-    "contactText": "Napisz na igor@jozefowicz.pl. Opisz problem, obecne narzędzia, oczekiwany rezultat i termin. Zakres, wycenę oraz warunki utrzymania ustalamy indywidualnie.",
+    "contactText": "Opisz, jak dziś wygląda praca w Twojej firmie i co chcesz usprawnić. Nie potrzebujesz gotowej specyfikacji technicznej. Ustalimy, czy warto połączyć obecne narzędzia, wdrożyć automatyzację czy stworzyć aplikację. Zakres, wycenę i zasady utrzymania uzgadniamy przed rozpoczęciem prac.",
     "bioText": "Programuję od 2018 roku. Tworzyłem aplikacje webowe w PHP i Laravelu, rozwijając także rozwiązania w React oraz projekty uczenia maszynowego. Doświadczenie obejmuje pracę przy realizacjach Matysart i nauczanie programowania w Gigantach Programowania. Łączę praktykę tworzenia oprogramowania z przekazywaniem wiedzy o AI, Pythonie i nowych technologiach.",
     "steps": [
-      "Rozmowa o potrzebach — ustalamy problem i oczekiwany rezultat.",
-      "Określenie zakresu — wybieramy funkcje i sposób oceny rozwiązania.",
-      "Prototyp — sprawdzamy kluczowe założenia na małym przykładzie.",
-      "Wdrożenie — integrujemy rozwiązanie i przekazujemy je do użytkowania."
+      "Rozmowa o pracy firmy — opisujesz proces, trudności i używane narzędzia.",
+      "Wybór rozwiązania — sprawdzamy gotowe narzędzia, ustalamy zakres, wycenę i sposób oceny efektu.",
+      "Pierwsza wersja — przygotowuję wybraną część aplikacji lub prototyp i zbieramy uwagi użytkowników.",
+      "Wdrożenie i dalsze kroki — uruchamiamy rozwiązanie, omawiamy obsługę i uzgadniamy zasady utrzymania."
     ],
     "labels": [
-      "Problem",
-      "Kontekst",
+      "Potrzeba",
+      "Kontekst biznesowy",
       "Mój wkład",
       "Rozwiązanie",
-      "Rezultat",
+      "Dostarczone funkcjonalności",
       "Technologie",
       "Materiały"
     ],
@@ -41,7 +41,7 @@
       "tagline": "Tworzę aplikacje. Łączę kod z inteligencją.",
       "discipline": "Software Engineer / Web & AI",
       "selected": "Wybrane realizacje",
-      "selectedNote": "Od aplikacji biznesowych po uczenie maszynowe. Konkretne problemy, przemyślane rozwiązania.",
+      "selectedNote": "Wybrane projekty aplikacji biznesowych, integracji systemów i AI.",
       "allProjects": "Wszystkie realizacje",
       "contribution": "Mój wkład",
       "project": "Realizacja",
@@ -52,9 +52,9 @@
         "Uczenie maszynowe",
         "Edukacja technologiczna"
       ],
-      "servicesNote": "Od pomysłu do działającego rozwiązania.",
+      "servicesNote": "Zacznijmy od tego, co chcesz usprawnić.",
       "articlesNote": "Myśli, doświadczenia i praktyka tworzenia oprogramowania.",
-      "contactTitle": "Zróbmy coś\nwartego uwagi.",
+      "contactTitle": "Co w codziennej pracy\nzajmuje za dużo czasu?",
       "copy": "Kopiuj e-mail",
       "copied": "Adres skopiowany",
       "copyFailed": "Nie udało się skopiować. Zaznacz adres powyżej.",
@@ -70,31 +70,122 @@
       "index": "Indeks projektów",
       "processNote": "Jasny cel. Przemyślany proces.",
       "scroll": "Przewiń, żeby poznać moją pracę",
-      "portraitAlt": "Artystyczny portret Igora Józefowicza"
-    }
+      "portraitAlt": "Artystyczny portret Igora Józefowicza",
+      "published": "Opublikowano",
+      "updated": "Zaktualizowano"
+    },
+    "contactPrompts": [
+      "Czym zajmuje się firma?",
+      "Co obecnie sprawia trudność?",
+      "Z jakich narzędzi korzystacie?",
+      "Co chcielibyście usprawnić?"
+    ],
+    "contactPromptsTitle": "Na początek wystarczy kilka zdań",
+    "businessLabels": {
+      "solution": "Przykładowe rozwiązanie",
+      "benefit": "Co może się zmienić"
+    },
+    "mlTitle": "LarynxAI — projekt uczenia maszynowego",
+    "mlNote": "W zespołowym projekcie LarynxAI pracowałem nad klasyfikatorem obrazów krtani. Korzystałem z modeli głębokiego uczenia i narzędzi do sprawdzania poprawności klasyfikacji.",
+    "serviceHeading": "Jak mogę pomóc?",
+    "mlLink": "Poznaj mój wkład w LarynxAI",
+    "serviceOverview": "Dla kogo jest ta usługa?",
+    "bioSummary": "Jestem niezależnym programistą. Programuję od 2018 roku, łącząc aplikacje webowe, integracje i uczenie maszynowe. Pracowałem przy projektach realizowanych w Matysart i uczyłem programowania. Współpracujesz bezpośrednio ze mną — od rozmowy o procesie po wdrożenie rozwiązania.",
+    "aboutLink": "Więcej o moim doświadczeniu"
   },
   "services": [
     {
       "slug": "custom-applications",
-      "title": "Dedykowane aplikacje",
-      "intro": "Gdy arkusze, e-maile i rozproszone narzędzia utrudniają codzienną pracę, aplikacja może uporządkować proces i dostęp do informacji.",
-      "items": [
-        "Narzędzia wewnętrzne do obsługi danych i procesów.",
-        "Portale klienta z dostępem do informacji i obsługi spraw.",
-        "Integracje istniejących systemów, które ograniczają ręczne przepisywanie danych.",
-        "Zakres projektu może obejmować analizę potrzeb, aplikację webową, integracje, testy i wdrożenie. Najpierw sprawdzamy, czy istniejące narzędzie nie wystarczy."
+      "title": "Aplikacje biznesowe i integracje systemów",
+      "intro": "Dla firm handlowych, dystrybucyjnych i usługowych B2B, w których obsługa zamówień, zleceń lub przenoszenie danych wymaga zbyt wielu ręcznych czynności. Możemy rozbudować obecną aplikację, połączyć narzędzia albo stworzyć system dopasowany do procesu.",
+      "details": [
+        {
+          "id": "business-applications",
+          "heading": "Aplikacja dopasowana do codziennej pracy",
+          "paragraphs": [
+            "Dedykowany system ma sens, gdy powtarzalny proces jest ważny dla firmy, a dostępne narzędzia nie obsługują go wystarczająco dobrze."
+          ],
+          "items": [
+            "Panele pracowników do obsługi zleceń, zgłoszeń i zamówień.",
+            "Portale klientów i kontrahentów z dostępem do własnych spraw.",
+            "Rozbudowa istniejących aplikacji zamiast wymiany całego systemu."
+          ]
+        },
+        {
+          "id": "automation-details",
+          "heading": "Automatyzacje i integracje systemów",
+          "paragraphs": [
+            "Jeśli używane aplikacje spełniają swoje zadania, często warto je połączyć. Zaczynamy od opisania, skąd pochodzą dane, dokąd mają trafić i kto odpowiada za ich poprawność."
+          ],
+          "items": [
+            "Przekazywanie danych między systemami przez dostępne interfejsy API.",
+            "Automatyzacja wybranych operacji związanych ze sprzedażą i obsługą firmy.",
+            "Generowanie zestawień i raportów z uzgodnionych źródeł.",
+            "Obsługa błędów, rejestr operacji i uzgodnienie uprawnień dostępu."
+          ]
+        },
+        {
+          "id": "fit",
+          "heading": "Kiedy budować, a kiedy wybrać gotowe narzędzie?",
+          "paragraphs": [
+            "Jeżeli gotowy produkt obsłuży proces po konfiguracji, nie ma powodu budować jego kopii. Dedykowaną aplikację rozważamy przy specyficznym przebiegu pracy, potrzebie połączenia danych lub ograniczeniach obecnego systemu.",
+            "Przed wyceną sprawdzamy dostęp do systemów i dokumentacji, ograniczenia integracji oraz przyszłe koszty utrzymania. Nie każda aplikacja udostępnia dane w sposób pozwalający na prostą integrację."
+          ],
+          "items": []
+        },
+        {
+          "id": "first-step",
+          "heading": "Od czego zacząć?",
+          "paragraphs": [
+            "Wybierz jeden proces: na przykład przenoszenie zamówień lub przygotowanie zestawienia. Opisz jego obecny przebieg i używane narzędzia. Ustalimy, od czego zacząć i jak sprawdzimy efekty."
+          ],
+          "items": []
+        }
       ]
     },
     {
       "slug": "ai-integrations",
-      "title": "Integracje AI",
-      "intro": "AI może wspierać pracowników w wyszukiwaniu informacji i obsłudze powtarzalnych zadań, jeśli ma dostęp do odpowiednich danych i podlega ocenie.",
-      "items": [
-        "Asystenci korzystający z dokumentów i wiedzy firmy.",
-        "Wyszukiwanie informacji z odnośnikami do materiałów źródłowych.",
-        "Wsparcie klasyfikacji i opracowywania powtarzalnych treści z kontrolą człowieka.",
-        "RAG oznacza wyszukanie odpowiednich fragmentów danych firmy i przekazanie ich modelowi jako kontekstu odpowiedzi. Nie gwarantuje poprawności: sprawdzamy źródła, uprawnienia i zachowanie przy braku informacji.",
-        "Zakres projektu może obejmować przygotowanie danych, prototyp, integrację z aplikacją i ocenę jakości. Koszty modeli i utrzymania omawiamy osobno."
+      "title": "Praktyczne wdrożenia AI",
+      "intro": "Dla firm, których pracownicy szukają informacji w wielu dokumentach lub regularnie opracowują podobne treści. Najpierw sprawdzamy, czy AI jest potrzebne i czy dostępne dane pozwalają przygotować użyteczne rozwiązanie.",
+      "details": [
+        {
+          "id": "ai-use-cases",
+          "heading": "W czym AI może pomóc?",
+          "paragraphs": [],
+          "items": [
+            "Asystent odpowiadający na pytania na podstawie dokumentów firmy.",
+            "Wewnętrzna wyszukiwarka wiedzy z odnośnikami do źródeł.",
+            "Klasyfikacja zgłoszeń i porządkowanie informacji tekstowych.",
+            "Przygotowanie roboczych podsumowań i treści do sprawdzenia przez pracownika.",
+            "Integracja modelu językowego z istniejącą aplikacją."
+          ]
+        },
+        {
+          "id": "quality",
+          "heading": "Jakość odpowiedzi i ograniczenia",
+          "paragraphs": [
+            "Zaczynamy od reprezentatywnych pytań lub zadań i ustalamy kryteria oceny. Sprawdzamy poprawność odpowiedzi, odnośniki do źródeł oraz zachowanie przy braku informacji. Istotne decyzje i treści wymagają odpowiedniej kontroli człowieka.",
+            "RAG to wyszukanie fragmentów firmowej wiedzy i przekazanie ich modelowi jako kontekstu. Pomaga oprzeć odpowiedź na dokumentach, ale nie usuwa ryzyka błędów. Przy prostym wyszukiwaniu zwykła wyszukiwarka może być lepszym wyborem."
+          ],
+          "items": []
+        },
+        {
+          "id": "data-access",
+          "heading": "Dane, uprawnienia i koszty",
+          "paragraphs": [
+            "Przed prototypem ustalamy, jakie dane mogą być przetwarzane, kto ma do nich dostęp i czy mogą trafić do zewnętrznego dostawcy modelu. Uprawnienia użytkownika muszą obowiązywać również przy wyszukiwaniu i tworzeniu odpowiedzi.",
+            "Sposób przechowywania danych, warunki dostawcy, rejestrowanie operacji i obsługę błędów dobieramy do konkretnego wdrożenia. Osobno omawiamy koszty modeli, hostingu i utrzymania."
+          ],
+          "items": []
+        },
+        {
+          "id": "first-step",
+          "heading": "Najpierw niewielki prototyp",
+          "paragraphs": [
+            "Wybieramy jedno zadanie i uzgodniony zestaw danych. Prototyp pozwala sprawdzić jakość i koszty przed szerszą integracją. Jeśli wyniki nie spełniają kryteriów, zmieniamy podejście lub rezygnujemy z AI w tym procesie."
+          ],
+          "items": []
+        }
       ]
     }
   ],
@@ -105,7 +196,7 @@
       "paragraphs": [
         "Obsługa internetowej oferty i sprzedaży rozwiązań grzewczych oraz wentylacyjnych.",
         "Aplikacja biznesowa i sklep internetowy dla firmy z branży ogrzewania i wentylacji.",
-        "Praca programistyczna nad aplikacją webową i sklepem internetowym.",
+        "Mój udział obejmował prace programistyczne nad aplikacją webową i sklepem oraz integracjami płatności i wyszukiwania.",
         "Aplikacja Laravel z bazą danych i interfejsem rozwijanym w React oraz integracjami płatności i wyszukiwania.",
         "Dostarczone funkcje obejmują prezentację oferty, obsługę sklepu oraz integracje płatności i wyszukiwania."
       ],
@@ -118,10 +209,10 @@
       "slug": "forcen",
       "title": "Forcen",
       "paragraphs": [
-        "Udostępnianie informacji o usługach firmy i wsparcie odpowiedzi na pytania.",
+        "Prezentacja usług firmy i udostępnienie odpowiedzi opartych na jej materiałach.",
         "Realizacja w ramach pracy w Matysart.",
         "Rozwój strony oraz integracja chatbota z API modelu językowego i kontekstem danych firmy.",
-        "Integracja typu RAG: wyszukiwanie materiałów firmy i przekazywanie ich jako kontekstu odpowiedzi.",
+        "Wyszukiwanie odpowiednich materiałów firmy i przekazywanie ich modelowi jako kontekstu odpowiedzi (RAG).",
         "Zakres realizacji obejmował integrację modelu językowego z danymi firmy w aplikacji webowej."
       ],
       "technologies": "Laravel, React, Tailwind, LLM API, RAG",
@@ -135,7 +226,7 @@
       "paragraphs": [
         "Praca nad klasyfikacją obrazów w projekcie dotyczącym patologii krtani.",
         "Zespołowy projekt uczenia maszynowego dotyczący obrazów krtani.",
-        "Mój zakres koncentrował się na klasyfikatorze; zarządzanie danymi i oznaczanie zdjęć są częścią szerszego systemu zespołu.",
+        "Pracowałem nad klasyfikatorem obrazów krtani. Zarządzanie danymi i oznaczanie zdjęć należą do pozostałych części systemu rozwijanego przez zespół.",
         "Praca z obrazami, modelami głębokiego uczenia i narzędziami do oceny klasyfikacji.",
         "Prace nad klasyfikatorem obrazów jako elementem szerszego systemu zespołu."
       ],
@@ -144,5 +235,105 @@
       "image": "/storage/projects/larynxai.jpg",
       "imageAlt": "Projekt LarynxAI"
     }
-  ]
+  ],
+  "business": {
+    "audience": {
+      "heading": "Dla kogo pracuję?",
+      "intro": "Wspieram przede wszystkim małe i średnie firmy handlowe, dystrybucyjne i usługowe B2B.",
+      "cards": [
+        {
+          "heading": "Handel i dystrybucja",
+          "text": "Obsługa zamówień, portale kontrahentów i przepływ informacji między sprzedażą a zapleczem firmy."
+        },
+        {
+          "heading": "Usługi B2B",
+          "text": "Obsługa zleceń i zgłoszeń, narzędzia dla pracowników oraz panele klientów i raportowanie."
+        },
+        {
+          "heading": "Rozproszona wiedza firmowa",
+          "text": "Informacje w dokumentach i kilku aplikacjach, do których pracownicy potrzebują łatwiejszego dostępu."
+        }
+      ]
+    },
+    "problems": {
+      "heading": "Czy te sytuacje znasz ze swojej firmy?",
+      "intro": "",
+      "cards": [
+        {
+          "heading": "Te same dane wpisujecie kilka razy",
+          "text": "Pracownicy przenoszą informacje między arkuszami, pocztą i aplikacjami.",
+          "solution": "Połączenie używanych systemów i automatyczny przepływ danych.",
+          "benefit": "Mniej przepisywania danych i mniejsze ryzyko pomyłek."
+        },
+        {
+          "heading": "Zamówienia i sprawy klientów trudno śledzić",
+          "text": "Informacje o postępie zleceń giną w wiadomościach, a klienci pytają o te same informacje.",
+          "solution": "Wspólny panel obsługi zleceń lub portal dla klientów.",
+          "benefit": "Czytelny status spraw i łatwiejszy dostęp do potrzebnych informacji."
+        },
+        {
+          "heading": "Odpowiedzi trzeba szukać w wielu miejscach",
+          "text": "Instrukcje, ustalenia i dokumentacja są rozproszone.",
+          "solution": "Uporządkowana baza wiedzy, wyszukiwarka lub asystent AI z odnośnikami do źródeł.",
+          "benefit": "Łatwiejsze odnajdywanie informacji z zachowaniem uprawnień dostępu."
+        }
+      ]
+    },
+    "collaboration": {
+      "heading": "Dlaczego warto ze mną współpracować?",
+      "intro": "",
+      "cards": [
+        {
+          "heading": "Bezpośrednia współpraca",
+          "text": "Omawiasz projekt bezpośrednio ze mną — od rozpoznania problemu po wdrożenie. Wspólnie ustalamy priorytety i zakres prac."
+        },
+        {
+          "heading": "Technologia dopasowana do potrzeb",
+          "text": "Zaczynam od sprawdzenia obecnych narzędzi. Czasem wystarczy integracja lub konfiguracja gotowego rozwiązania."
+        },
+        {
+          "heading": "Stopniowe wdrożenie",
+          "text": "Możemy zacząć od jednego procesu lub prototypu. Dalszy rozwój planujemy na podstawie potrzeb firmy i uwag użytkowników."
+        },
+        {
+          "heading": "Aplikacje i AI w jednym procesie",
+          "text": "Łączę tworzenie aplikacji z uczeniem maszynowym. AI proponuję tam, gdzie można sprawdzić jego przydatność i jakość."
+        }
+      ]
+    }
+  },
+  "offerings": [
+    {
+      "id": "custom-applications",
+      "slug": "custom-applications",
+      "heading": "Dedykowane aplikacje biznesowe",
+      "text": "Systemy obsługi zamówień i zleceń, panele pracowników oraz portale klientów. Gdy gotowe narzędzia nie pasują do sposobu pracy firmy.",
+      "linkLabel": "Poznaj aplikacje biznesowe"
+    },
+    {
+      "id": "automation",
+      "slug": "custom-applications",
+      "anchor": "automation-details",
+      "heading": "Automatyzacje i integracje systemów",
+      "text": "Połączenie narzędzi sprzedażowych i wewnętrznych, przepływ danych oraz raporty. Dobry punkt startu, gdy chcesz usprawnić jeden powtarzalny proces.",
+      "linkLabel": "Sprawdź możliwości integracji"
+    },
+    {
+      "id": "ai-integrations",
+      "slug": "ai-integrations",
+      "heading": "Praktyczne wdrożenia AI",
+      "text": "Wyszukiwanie w dokumentach firmy, asystenci odpowiadający na pytania na podstawie dokumentów i przetwarzanie treści. Z oceną jakości, kontrolą dostępu i uwzględnieniem ograniczeń modeli.",
+      "linkLabel": "Poznaj zastosowania AI"
+    }
+  ],
+  "meta": {
+    "home": {
+      "title": "Aplikacje dla firm, automatyzacje i integracje",
+      "description": "Pomagam MŚP usprawniać procesy: aplikacje biznesowe, integracje systemów i praktyczne AI. Bezpośrednia współpraca z Igorem Józefowiczem."
+    },
+    "services": {
+      "title": "Aplikacje biznesowe, automatyzacje i AI — oferta",
+      "description": "Dedykowane aplikacje dla firm, automatyzacja procesów i integracje systemów. Zobacz zakres usług i sposób współpracy."
+    }
+  }
 }

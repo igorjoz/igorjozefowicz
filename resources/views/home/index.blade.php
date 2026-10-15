@@ -8,7 +8,7 @@
     </h1>
 
     {{-- <div class="home__header-image-wrapper">
-        <img src="{{ Storage::url('public/favicon.png') }}" alt="Igor Józefowicz" class="home__header-image">
+        <img src="{{ asset('images/logo-igorjoz.svg') }}" alt="Igor Józefowicz" class="home__header-image">
     </div> --}}
 
     <h2 class="home__subheader-role">

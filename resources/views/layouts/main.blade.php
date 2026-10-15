@@ -28,7 +28,12 @@
     content="Igor Józefowicz, Igor, Józefowicz, igorjoz, igorjozef, igorjozefowicz, personal website, blog, contact">
     <meta name="author" content="Igor Józefowicz">
 
-    <link rel="icon" href="{{ Storage::url('public/favicon.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="{{ asset('favicon-32x32.png') }}" type="image/png" sizes="32x32">
+    <link rel="icon" href="{{ asset('favicon-16x16.png') }}" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" sizes="180x180">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
     @vite(['resources/sass/index.scss', 'resources/js/app.js'])
 </head>

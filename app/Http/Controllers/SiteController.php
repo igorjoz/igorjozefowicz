@@ -43,8 +43,8 @@ class SiteController extends Controller
         abort_unless(in_array($section, $nav, true), 404);
         $title = $section === '' ? $ui['hero'] : $ui['nav'][array_search($section, $nav)];
         $sections = [];
-        $add = function ($id, $heading, $paragraphs = [], $items = [], $links = [], $image = null, $imageAlt = null) use (&$sections) {
-            $sections[] = compact('id', 'heading', 'paragraphs', 'items', 'links', 'image', 'imageAlt');
+        $add = function ($id, $heading, $paragraphs = [], $items = [], $links = [], $image = null, $imageAlt = null, $kind = 'text', $project = null) use (&$sections) {
+            $sections[] = compact('id', 'heading', 'paragraphs', 'items', 'links', 'image', 'imageAlt', 'kind', 'project');
         };
         if ($section === '' || $section === 'services') {
             $services = $data['services'];
@@ -54,7 +54,7 @@ class SiteController extends Controller
                 $title = $services[0]['title'];
             }
             foreach ($services as $service) {
-                $add($service['slug'], $service['title'], [$service['intro']], $service['items'], [['label' => $ui['more'], 'href' => "/$locale/services/{$service['slug']}"]]);
+                $add($service['slug'], $service['title'], [$service['intro']], $service['items'], [['label' => $ui['more'], 'href' => "/$locale/services/{$service['slug']}"]], kind: 'service');
             }
         }
         if ($section === '' || $section === 'projects') {
@@ -70,7 +70,7 @@ class SiteController extends Controller
                 $add('technologies', $ui['labels'][5], [$project['technologies']], [], [['label' => $ui['labels'][6], 'href' => $project['url']]]);
             } else {
                 foreach ($projects as $project) {
-                    $add($project['slug'], $project['title'], [$project['paragraphs'][0]], [], [['label' => $ui['more'], 'href' => "/$locale/projects/{$project['slug']}"]], $project['image'], $project['imageAlt']);
+                    $add($project['slug'], $project['title'], [$project['paragraphs'][0]], [], [['label' => $ui['more'], 'href' => "/$locale/projects/{$project['slug']}"]], $project['image'], $project['imageAlt'], 'project', $project);
                 }
                 if ($section === 'projects') {
                     $add('portfolio', $ui['portfolio'], [], [], $this->portfolio());
@@ -98,6 +98,14 @@ class SiteController extends Controller
             abort(404);
         }
         $add('contact', $ui['contact'], [$ui['contactText']], [], [['label' => $ui['cta'], 'href' => 'mailto:igor@jozefowicz.pl']]);
+        if ($section === '') {
+            $order = ['project' => 0, 'about' => 1, 'service' => 2, 'process' => 3, 'articles' => 4, 'contact' => 5];
+            usort($sections, fn ($a, $b) => ($order[$a['kind']] ?? $order[$a['id']] ?? 2) <=> ($order[$b['kind']] ?? $order[$b['id']] ?? 2));
+        }
+        $presentation = [
+            'view' => $section === '' ? 'home' : ($slug ? rtrim($section, 's').'-detail' : $section),
+            'project' => $section === 'projects' && $slug ? $project : null,
+        ];
         $path = $section ? "/$section".($slug ? "/$slug" : '') : '';
         $description = $section === '' ? $ui['intro'] : ($sections[0]['paragraphs'][0] ?? $ui['intro']);
         if ($articleHtml && preg_match('/<p>(.*?)<\/p>/s', $articleHtml, $matches)) {
@@ -107,7 +115,7 @@ class SiteController extends Controller
 
         return Inertia::render('Site', [
             'locale' => $locale, 'section' => $section, 'title' => $title, 'description' => $description,
-            'ui' => $ui, 'sections' => $sections, 'articleHtml' => $articleHtml,
+            'ui' => $ui, 'sections' => $sections, 'articleHtml' => $articleHtml, 'presentation' => $presentation,
             'canonical' => url("/$locale$path"),
             'alternates' => ['pl' => url("/pl$path"), 'en' => url("/en$path")],
         ])->withViewData(['site' => true]);

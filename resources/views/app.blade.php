@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#ff69b4">
+    <meta name="theme-color" content="#101115">
 
     @if(isset($site))
         @php($meta = $page['props'])
@@ -39,11 +39,16 @@
     @endif
     <meta name="author" content="Igor Józefowicz">
 
-    <link rel="icon" href="{{ Storage::url('public/favicon.png') }}" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="{{ asset('favicon-32x32.png') }}" type="image/png" sizes="32x32">
+    <link rel="icon" href="{{ asset('favicon-16x16.png') }}" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" sizes="180x180">
+    <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+    @unless(isset($site))
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @endunless
 
     {{-- Inject React Fast Refresh preamble for Vite dev server --}}
     @viteReactRefresh

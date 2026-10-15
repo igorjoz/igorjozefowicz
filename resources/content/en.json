@@ -36,7 +36,42 @@
       "Outcome",
       "Technologies",
       "Resources"
-    ]
+    ],
+    "studio": {
+      "tagline": "Building applications. Connecting code with intelligence.",
+      "discipline": "Software Engineer / Web & AI",
+      "selected": "Selected work",
+      "selectedNote": "From business applications to machine learning. Real problems, considered solutions.",
+      "allProjects": "All projects",
+      "contribution": "My contribution",
+      "project": "Project",
+      "aboutTitle": "Code is just the beginning.",
+      "aboutNote": "I build. I experiment. I share what I learn.",
+      "expertise": [
+        "Web applications",
+        "Machine learning",
+        "Technology education"
+      ],
+      "servicesNote": "From an idea to a working solution.",
+      "articlesNote": "Thoughts, experience and the practice of building software.",
+      "contactTitle": "Let’s make\nsomething matter.",
+      "copy": "Copy email",
+      "copied": "Address copied",
+      "copyFailed": "Could not copy. Select the address above.",
+      "menu": "Menu",
+      "closeMenu": "Close menu",
+      "skip": "Skip to content",
+      "navigation": "Main navigation",
+      "language": "Choose language",
+      "readCase": "Explore project",
+      "backProjects": "All projects",
+      "elsewhere": "Find me elsewhere",
+      "footer": "Code, data and curiosity.",
+      "index": "Project index",
+      "processNote": "A clear goal. A considered process.",
+      "scroll": "Scroll to explore my work",
+      "portraitAlt": "Artistic portrait of Igor Józefowicz"
+    }
   },
   "services": [
     {

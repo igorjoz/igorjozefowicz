@@ -36,7 +36,42 @@
       "Rezultat",
       "Technologie",
       "Materiały"
-    ]
+    ],
+    "studio": {
+      "tagline": "Tworzę aplikacje. Łączę kod z inteligencją.",
+      "discipline": "Software Engineer / Web & AI",
+      "selected": "Wybrane realizacje",
+      "selectedNote": "Od aplikacji biznesowych po uczenie maszynowe. Konkretne problemy, przemyślane rozwiązania.",
+      "allProjects": "Wszystkie realizacje",
+      "contribution": "Mój wkład",
+      "project": "Realizacja",
+      "aboutTitle": "Kod to dopiero początek.",
+      "aboutNote": "Tworzę. Eksperymentuję. Dzielę się wiedzą.",
+      "expertise": [
+        "Aplikacje webowe",
+        "Uczenie maszynowe",
+        "Edukacja technologiczna"
+      ],
+      "servicesNote": "Od pomysłu do działającego rozwiązania.",
+      "articlesNote": "Myśli, doświadczenia i praktyka tworzenia oprogramowania.",
+      "contactTitle": "Zróbmy coś\nwartego uwagi.",
+      "copy": "Kopiuj e-mail",
+      "copied": "Adres skopiowany",
+      "copyFailed": "Nie udało się skopiować. Zaznacz adres powyżej.",
+      "menu": "Menu",
+      "closeMenu": "Zamknij menu",
+      "skip": "Przejdź do treści",
+      "navigation": "Nawigacja główna",
+      "language": "Wybierz język",
+      "readCase": "Poznaj realizację",
+      "backProjects": "Wszystkie realizacje",
+      "elsewhere": "Znajdziesz mnie również tutaj",
+      "footer": "Kod, dane i ciekawość.",
+      "index": "Indeks projektów",
+      "processNote": "Jasny cel. Przemyślany proces.",
+      "scroll": "Przewiń, żeby poznać moją pracę",
+      "portraitAlt": "Artystyczny portret Igora Józefowicza"
+    }
   },
   "services": [
     {
